@@ -1447,6 +1447,50 @@ export const prerender = false;
           </div>
         </div>
 
+        ${(lead.alternativeContacts || []).length ? `
+          <div class="drawer-card">
+            <div class="drawer-card-title">
+              <i data-lucide="user-plus" style="width: 14px; height: 14px;"></i>
+              <span>Contacto Alternativo (según Apollo)</span>
+            </div>
+            ${lead.alternativeContacts.map(alt => `
+              <div style="margin-bottom: 12px;">
+                <div style="font-size: 14px; font-weight: 600; color: var(--pure-white); margin-bottom: 2px;">
+                  ${escapeHtml(alt.fullName)}
+                </div>
+                <div style="font-size: 12px; color: var(--gray-muted); margin-bottom: 8px;">
+                  ${escapeHtml(alt.title)} · ${escapeHtml(alt.company)}
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; background: #1C1C1C; padding: 8px 12px; border-radius: 6px;">
+                    <span style="font-size: 12px; color: var(--pure-white); display: flex; align-items: center; gap: 6px;">
+                      <i data-lucide="mail" style="width: 13px; height: 13px; color: var(--red-accent);"></i>
+                      <span>${escapeHtml(alt.email || 'Email no disponible')}</span>
+                    </span>
+                    ${alt.email ? `
+                      <button class="btn-solid-red" style="padding: 4px 10px; font-size: 11px;" onclick="window.copyText('${alt.email}', 'Correo copiado')">
+                        <i data-lucide="copy" style="width: 11px; height: 11px;"></i>
+                        <span>Copiar</span>
+                      </button>
+                    ` : ''}
+                  </div>
+                  ${alt.linkedinUrl ? `
+                    <a href="${alt.linkedinUrl}" target="_blank" rel="noopener noreferrer" class="btn-outline" style="justify-content: center;">
+                      <i data-lucide="external-link" style="width: 13px; height: 13px;"></i>
+                      <span>Abrir Perfil de LinkedIn</span>
+                    </a>
+                  ` : ''}
+                </div>
+                ${alt.note ? `
+                  <div style="font-size: 11px; color: var(--gray-light); line-height: 1.4; margin-top: 8px;">
+                    ${escapeHtml(alt.note)}
+                  </div>
+                ` : ''}
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+
         <div class="drawer-card">
           <div class="drawer-card-title">
             <i data-lucide="message-square" style="width: 14px; height: 14px;"></i>
