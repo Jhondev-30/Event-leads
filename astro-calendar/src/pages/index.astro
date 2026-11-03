@@ -1,0 +1,1543 @@
+---
+import Layout from '../layouts/Layout.astro';
+import generalLeads from '../data/generalLeads.json';
+import philipLeads from '../data/philipLeads.json';
+
+export const prerender = false;
+---
+
+<Layout title="Calendario de Convocatorias 2027 | SpeakUp Express">
+
+  <!-- THEATRICAL CURTAIN ("El telón sube") -->
+  <div id="stage-curtain">
+    <div class="curtain-brand">
+      <div class="curtain-tag">DIRECTORIO DE CONVOCATORIAS 2027</div>
+      <div class="curtain-title">El telón sube</div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="app-toast">
+    <i data-lucide="check" style="width: 14px; height: 14px; color: #4ade80;"></i>
+    <span id="toast-text">Actualizado</span>
+  </div>
+
+  <!-- DOSSIER SIDE DRAWER -->
+  <div id="dossier-backdrop"></div>
+  <div id="dossier-drawer">
+    <div class="drawer-header">
+      <div>
+        <div class="drawer-sub" id="drawer-sub-badge">
+          <i data-lucide="calendar" style="width: 14px; height: 14px;"></i>
+          <span id="drawer-date-str">ABRIL 2027</span>
+        </div>
+        <h2 class="drawer-title" id="drawer-event-title">Nombre del Evento</h2>
+      </div>
+      <button class="drawer-close" id="drawer-close-btn" title="Cerrar">
+        <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+      </button>
+    </div>
+    <div class="drawer-body" id="drawer-body-content">
+      <!-- Injected by client script -->
+    </div>
+  </div>
+
+  <!-- MAIN APP SHELL -->
+  <div class="app-shell">
+
+    <!-- HEADER -->
+    <header class="stage-header">
+      <div class="header-nav-row">
+        <div class="brand-mark">
+          <div class="dot"></div>
+          <span>SpeakUp Express</span>
+          <span class="vps-badge">
+            <i data-lucide="radio" style="width: 11px; height: 11px; color: #4ade80;"></i>
+            <span>Sincronizado VPS</span>
+          </span>
+        </div>
+
+        <!-- VIEW TOGGLE -->
+        <div class="view-toggle">
+          <button class="view-btn active" id="tab-general">
+            <i data-lucide="layers" style="width: 14px; height: 14px;"></i>
+            <span>Todos los Eventos</span>
+            <span class="count-tag" id="tag-count-general">{generalLeads.length}</span>
+          </button>
+          <button class="view-btn" id="tab-philip">
+            <i data-lucide="star" style="width: 14px; height: 14px;"></i>
+            <span>Philip Chan</span>
+            <span class="count-tag" id="tag-count-philip">{philipLeads.length}</span>
+          </button>
+        </div>
+      </div>
+
+      <h1 class="hero-title" id="main-hero-title">Calendario de Convocatorias 2027</h1>
+      <p class="hero-subtitle" id="main-hero-subtitle">
+        Ventana estratégica de postulación de conferencistas (5 a 10 meses). Acceso cronológico a conferencias y organizadores verificados, con sincronización colaborativa en tiempo real para todo el equipo.
+      </p>
+
+      <!-- METRICS & SEARCH STRIP -->
+      <div class="controls-strip">
+        <div class="summary-metrics">
+          <div class="metric-item">
+            <span class="val" id="stat-total">{generalLeads.length}</span>
+            <span class="label">Eventos</span>
+          </div>
+          <div class="metric-item">
+            <span class="val" id="stat-pending" style="color: var(--red-accent);">{generalLeads.length}</span>
+            <span class="label">Pendientes</span>
+          </div>
+          <div class="metric-item">
+            <span class="val" id="stat-contacted" style="color: #4ade80;">0</span>
+            <span class="label">Contactados</span>
+          </div>
+          <div class="metric-item">
+            <span class="val" id="stat-progress">0%</span>
+            <span class="label">Avance</span>
+          </div>
+        </div>
+
+        <div class="filter-actions">
+          <div class="search-box">
+            <span class="search-icon-wrap">
+              <i data-lucide="search" style="width: 14px; height: 14px;"></i>
+            </span>
+            <input 
+              type="text" 
+              class="search-input" 
+              id="search-input" 
+              placeholder="Buscar evento, organizador o sede..."
+            />
+          </div>
+          <select class="status-filter-select" id="status-filter">
+            <option value="all">Todos los estados</option>
+            <option value="pending">No contactado</option>
+            <option value="contacted">Contactado</option>
+            <option value="following">En seguimiento</option>
+            <option value="confirmed">Confirmado</option>
+            <option value="declined">Descartado</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <!-- CALENDAR ACCORDION -->
+    <main>
+      <div class="calendar-container" id="calendar-accordion">
+        <!-- Rendered and synced via client-side script -->
+      </div>
+    </main>
+
+  </div>
+
+  <style is:global>
+    /* STYLES */
+    #stage-curtain {
+      position: fixed;
+      inset: 0;
+      background: #0A0A0A;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      border-bottom: 3px solid var(--brand-red);
+    }
+    .curtain-brand { text-align: center; }
+    .curtain-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red-accent);
+      margin-bottom: 8px;
+    }
+    .curtain-title {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--pure-white);
+    }
+
+    .app-shell {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 40px 24px 90px 24px;
+    }
+
+    .stage-header { margin-bottom: 36px; }
+
+    .header-nav-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: -0.01em;
+      color: var(--pure-white);
+    }
+
+    .brand-mark .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand-red);
+      box-shadow: 0 0 10px #FF4D47;
+    }
+
+    .vps-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      color: var(--gray-light);
+      font-weight: 500;
+    }
+
+    .view-toggle {
+      display: inline-flex;
+      background: var(--stage-black);
+      padding: 4px;
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .view-btn {
+      background: transparent;
+      border: none;
+      color: var(--gray-light);
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: var(--font-ui);
+      border-radius: 7px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .view-btn:hover {
+      color: var(--pure-white);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .view-btn.active {
+      background: var(--brand-red);
+      color: var(--pure-white);
+      box-shadow: 0 2px 8px rgba(229, 12, 19, 0.4);
+    }
+
+    .count-tag {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 2px 7px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      color: var(--pure-white);
+      text-wrap: balance;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--gray-light);
+      max-width: 740px;
+      line-height: 1.6;
+      opacity: 0.92;
+      text-wrap: pretty;
+    }
+
+    .controls-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+      background: var(--stage-black);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 12px 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    }
+
+    .summary-metrics {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .metric-item {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      font-size: 13px;
+    }
+
+    .metric-item .val {
+      font-weight: 700;
+      color: var(--pure-white);
+      font-size: 16px;
+    }
+
+    .metric-item .label { color: var(--gray-muted); }
+
+    .filter-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      justify-content: flex-end;
+      min-width: 280px;
+    }
+
+    .search-box {
+      position: relative;
+      flex: 1;
+      max-width: 380px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: #181818;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 8px 12px 8px 34px;
+      color: var(--pure-white);
+      font-family: var(--font-ui);
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-input:focus { border-color: var(--brand-red); }
+
+    .search-icon-wrap {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gray-muted);
+      display: flex;
+      align-items: center;
+      pointer-events: none;
+    }
+
+    .status-filter-select {
+      background: #181818;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: var(--pure-white);
+      font-family: var(--font-ui);
+      font-size: 13px;
+      font-weight: 500;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .status-filter-select:focus { border-color: var(--brand-red); }
+
+    .calendar-container {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .month-section {
+      background: var(--stage-black);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.25s ease;
+    }
+
+    .month-section.is-open { border-color: rgba(229, 12, 19, 0.5); }
+
+    .month-header {
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      user-select: none;
+      background: #111111;
+      transition: background 0.2s ease;
+    }
+
+    .month-header:hover { background: #161616; }
+
+    .month-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .month-counter-badge {
+      background: #181818;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 8px 14px;
+      text-align: center;
+      min-width: 58px;
+    }
+
+    .counter-number {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--brand-red);
+      line-height: 1;
+    }
+
+    .counter-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--gray-muted);
+      margin-top: 2px;
+    }
+
+    .month-title-wrap h2 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--pure-white);
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .month-window-pill {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(255, 77, 71, 0.12);
+      color: var(--red-accent);
+      border: 1px solid rgba(255, 77, 71, 0.3);
+    }
+
+    .month-meta-sub {
+      font-size: 13px;
+      color: var(--gray-muted);
+      margin-top: 2px;
+    }
+
+    .toggle-month-btn {
+      background: var(--brand-red);
+      color: var(--pure-white);
+      border: none;
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-ui);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .toggle-month-btn:hover { background: var(--brand-red-hover); }
+
+    .toggle-month-btn svg { transition: transform 0.25s ease; }
+
+    .month-section.is-open .toggle-month-btn svg { transform: rotate(180deg); }
+
+    .month-events-wrapper {
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .month-events-inner {
+      padding: 24px;
+      background: #0D0D0D;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 16px;
+    }
+
+    .event-card {
+      background: #141414;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(229, 12, 19, 0.4);
+    }
+
+    .card-header-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .event-date-text {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--red-accent);
+    }
+
+    .status-select {
+      background-color: #1A1A1A !important;
+      color: #FFFFFF !important;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      font-family: var(--font-ui);
+      outline: none;
+      cursor: pointer;
+    }
+
+    .status-select option {
+      background-color: #1A1A1A !important;
+      color: #FFFFFF !important;
+      padding: 8px;
+    }
+
+    .status-select.is-pending { border-color: rgba(255, 255, 255, 0.2); }
+    .status-select.is-contacted { background-color: #0369a1 !important; border-color: #38bdf8; }
+    .status-select.is-following { background-color: #b45309 !important; border-color: #fbbf24; }
+    .status-select.is-confirmed { background-color: #15803d !important; border-color: #4ade80; }
+    .status-select.is-declined { background-color: #334155 !important; border-color: #94a3b8; }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--pure-white);
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .card-meta-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--gray-muted);
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .meta-segment {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .organizer-strip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #1A1A1A;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-bottom: 16px;
+    }
+
+    .organizer-icon {
+      color: var(--red-accent);
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .organizer-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .organizer-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--pure-white);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .organizer-title {
+      font-size: 11px;
+      color: var(--gray-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .open-dossier-btn {
+      width: 100%;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--pure-white);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-ui);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .open-dossier-btn:hover {
+      background: var(--brand-red);
+      border-color: var(--brand-red);
+    }
+
+    /* DRAWER */
+    #dossier-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    #dossier-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    #dossier-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 600px;
+      background: var(--stage-black);
+      border-left: 1px solid var(--border-subtle);
+      box-shadow: -10px 0 40px rgba(0,0,0,0.8);
+      z-index: 1001;
+      overflow-y: auto;
+      transform: translateX(100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .drawer-header {
+      padding: 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      background: #111111;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .drawer-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--pure-white);
+    }
+
+    .drawer-sub {
+      font-size: 12px;
+      color: var(--red-accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .drawer-close {
+      background: #1E1E1E;
+      border: none;
+      color: var(--pure-white);
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease;
+    }
+
+    .drawer-close:hover { background: var(--brand-red); }
+
+    .drawer-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1;
+    }
+
+    .drawer-card {
+      background: #141414;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .drawer-card-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--red-accent);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .status-button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 8px;
+    }
+
+    .status-btn {
+      background: #1E1E1E;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--pure-white);
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font-ui);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .status-btn:hover { background: #282828; }
+    .status-btn.selected { background: var(--brand-red); border-color: var(--brand-red); }
+
+    .pitch-quote-box {
+      font-style: italic;
+      color: var(--gray-light);
+      font-size: 13px;
+      line-height: 1.6;
+      background: #1B1B1B;
+      border-left: 3px solid var(--brand-red);
+      padding: 12px 14px;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 12px;
+    }
+
+    .btn-solid-red {
+      background: var(--brand-red);
+      color: var(--pure-white);
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-ui);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s ease;
+    }
+
+    .btn-solid-red:hover { background: var(--brand-red-hover); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--pure-white);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-ui);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline:hover { background: #222222; border-color: rgba(255, 255, 255, 0.3); }
+
+    .note-input-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .agent-name-input {
+      background: #1A1A1A;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 6px;
+      padding: 8px 10px;
+      color: var(--pure-white);
+      font-size: 12px;
+      font-family: var(--font-ui);
+      outline: none;
+    }
+
+    .agent-name-input:focus { border-color: var(--brand-red); }
+
+    .note-textarea {
+      background: #1A1A1A;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 6px;
+      padding: 10px;
+      color: var(--pure-white);
+      font-size: 12px;
+      font-family: var(--font-ui);
+      min-height: 70px;
+      resize: vertical;
+      outline: none;
+    }
+
+    .note-textarea:focus { border-color: var(--brand-red); }
+
+    .notes-history-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 14px;
+      max-height: 220px;
+      overflow-y: auto;
+    }
+
+    .note-entry {
+      background: #181818;
+      border-left: 2px solid var(--red-accent);
+      padding: 8px 10px;
+      border-radius: 0 6px 6px 0;
+      font-size: 12px;
+    }
+
+    .note-entry-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--gray-muted);
+      font-size: 10px;
+      margin-bottom: 4px;
+    }
+
+    .note-entry-text { color: var(--gray-light); line-height: 1.4; }
+
+    #app-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--stage-black);
+      border: 1px solid var(--brand-red);
+      color: var(--pure-white);
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.8);
+      z-index: 99999;
+      pointer-events: none;
+      opacity: 0;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #app-toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 32px; }
+      .month-header { flex-direction: column; align-items: flex-start; }
+      .events-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- CLIENT-SIDE LOGIC & REAL-TIME TEAM COLLABORATION -->
+  <script is:inline define:vars={{ generalLeads, philipLeads }}>
+    window.APP_DATA = {
+      generalLeads,
+      philipLeads
+    };
+
+    let currentView = 'general';
+    let searchTerm = '';
+    let filterStatus = 'all';
+    let openMonths = new Set(['April 2027']);
+    let serverStore = {};
+    let activeDossierLeadId = null;
+
+    const MONTH_META = {
+      'January 2027': { label: 'Enero 2027', windowTag: 'Faltan 2 meses', desc: 'Apertura de agenda Q1 y cumbres de inicio de año' },
+      'February 2027': { label: 'Febrero 2027', windowTag: 'Faltan 3 meses', desc: 'Conferencias ejecutivas y encuentros anuales Q1' },
+      'March 2027': { label: 'Marzo 2027', windowTag: 'Faltan 4 meses', desc: 'Cumbres de primavera y convenciones de mitad de Q1' },
+      'April 2027': { label: 'Abril 2027', windowTag: 'Faltan 5 meses', desc: 'Ventana de cierre inmediato para postulaciones' },
+      'May 2027': { label: 'Mayo 2027', windowTag: 'Faltan 6 meses', desc: 'Convocatorias abiertas y comités de programa activos' },
+      'June 2027': { label: 'Junio 2027', windowTag: 'Faltan 7 meses', desc: 'Temporada alta de conferencias anuales' },
+      'July 2027': { label: 'Julio 2027', windowTag: 'Faltan 8 meses', desc: 'Planificación estratégica de oradores para Q3' },
+      'August 2027': { label: 'Agosto 2027', windowTag: 'Faltan 9 meses', desc: 'Cumbres de liderazgo nacional y asambleas' },
+      'September 2027': { label: 'Septiembre 2027', windowTag: 'Faltan 10 meses', desc: 'Apertura de convocatorias y selección de keynotes' },
+      'October 2027': { label: 'Octubre 2027', windowTag: 'Faltan 11 meses', desc: 'Planificación de fin de año y cumbres ejecutivas' },
+      'November 2027': { label: 'Noviembre 2027', windowTag: 'Faltan 12 meses', desc: 'Cumbres de liderazgo, finanzas y cierre de año' },
+      'December 2027': { label: 'Diciembre 2027', windowTag: 'Faltan 13 meses', desc: 'Encuentros anuales de evaluación y planificación' }
+    };
+
+    async function syncFromServer(silent = false) {
+      try {
+        const res = await fetch('/api/status', { cache: 'no-store' });
+        if (res.ok) {
+          const json = await res.json();
+          if (json.ok && json.store) {
+            serverStore = json.store;
+            updateUI();
+            if (activeDossierLeadId) {
+              refreshDossierContent(activeDossierLeadId);
+            }
+          }
+        }
+      } catch (e) {
+        console.warn('Sync offline fallback');
+      }
+    }
+
+    async function persistStatus(leadId, newStatus, agentName = '', noteText = '') {
+      const author = agentName || localStorage.getItem('speakup_vps_agent') || 'Equipo';
+      try {
+        const res = await fetch('/api/status', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            leadId,
+            status: newStatus,
+            agentName: author,
+            note: noteText
+          })
+        });
+        if (res.ok) {
+          const json = await res.json();
+          if (json.ok && json.store) {
+            serverStore = json.store;
+            updateUI();
+            if (activeDossierLeadId) {
+              refreshDossierContent(activeDossierLeadId);
+            }
+            showToast('Actualizado en el servidor');
+          }
+        }
+      } catch (err) {
+        showToast('Error de conexión al servidor');
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('app-toast');
+      document.getElementById('toast-text').textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    function getActiveDataset() {
+      return currentView === 'philip' ? window.APP_DATA.philipLeads : window.APP_DATA.generalLeads;
+    }
+
+    function updateUI() {
+      const leads = getActiveDataset();
+      const filtered = leads.filter(l => {
+        const st = (serverStore[l.id] || {}).status || 'pending';
+        if (filterStatus !== 'all' && st !== filterStatus) return false;
+        if (!searchTerm) return true;
+        const ev = (l.actualEvents && l.actualEvents[0]) || {};
+        const q = `${l.fullName} ${l.company} ${l.title} ${l.city} ${l.eventCity} ${ev.name}`.toLowerCase();
+        return q.includes(searchTerm);
+      });
+
+      // Update KPI
+      const total = leads.length;
+      let contacted = 0;
+      leads.forEach(l => {
+        const st = (serverStore[l.id] || {}).status || 'pending';
+        if (st === 'contacted' || st === 'following' || st === 'confirmed') contacted++;
+      });
+      const pending = total - contacted;
+      const pct = total > 0 ? Math.round((contacted / total) * 100) : 0;
+
+      document.getElementById('stat-total').textContent = total;
+      document.getElementById('stat-pending').textContent = pending;
+      document.getElementById('stat-contacted').textContent = contacted;
+      document.getElementById('stat-progress').textContent = `${pct}%`;
+
+      const defaultMonthsOrder = [
+        'January 2027', 'February 2027', 'March 2027', 'April 2027', 
+        'May 2027', 'June 2027', 'July 2027', 'August 2027', 
+        'September 2027', 'October 2027', 'November 2027', 'December 2027'
+      ];
+      const groups = {};
+      defaultMonthsOrder.forEach(m => groups[m] = []);
+      filtered.forEach(l => {
+        const m = l.eventMonth || 'June 2027';
+        if (!groups[m]) groups[m] = [];
+        groups[m].push(l);
+      });
+
+      // Include all months that have leads
+      const allActiveMonths = Object.keys(groups).filter(m => groups[m].length > 0);
+      const monthsOrder = defaultMonthsOrder.filter(m => groups[m] && groups[m].length > 0);
+      allActiveMonths.forEach(m => {
+        if (!monthsOrder.includes(m)) monthsOrder.push(m);
+      });
+
+      const container = document.getElementById('calendar-accordion');
+      let html = '';
+
+      monthsOrder.forEach(monthKey => {
+        const monthLeads = groups[monthKey] || [];
+        if (monthLeads.length === 0 && (searchTerm || (currentView === 'philip' && monthKey === 'August 2027'))) return;
+
+        const meta = MONTH_META[monthKey] || { label: monthKey, windowTag: 'Ventana 2027', desc: 'Convocatorias' };
+        const slug = slugify(monthKey);
+        const isOpen = openMonths.has(monthKey);
+
+        let contactedInMonth = 0;
+        monthLeads.forEach(l => {
+          const st = (serverStore[l.id] || {}).status || 'pending';
+          if (st === 'contacted' || st === 'following' || st === 'confirmed') contactedInMonth++;
+        });
+
+        html += `
+          <div class="month-section ${isOpen ? 'is-open' : ''}" id="sec-${slug}">
+            <div class="month-header" onclick="window.toggleMonth('${monthKey}')">
+              <div class="month-left">
+                <div class="month-counter-badge">
+                  <div class="counter-number">${monthLeads.length}</div>
+                  <div class="counter-label">Eventos</div>
+                </div>
+                <div class="month-title-wrap">
+                  <h2>
+                    <span>${meta.label}</span>
+                    <span class="month-window-pill">${meta.windowTag}</span>
+                  </h2>
+                  <div class="month-meta-sub">${meta.desc} · ${contactedInMonth} de ${monthLeads.length} contactados</div>
+                </div>
+              </div>
+
+              <div class="month-right">
+                <button class="toggle-month-btn" type="button">
+                  <span>${isOpen ? 'Plegar mes' : 'Desplegar eventos'}</span>
+                  <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="month-events-wrapper" id="wrap-${slug}" style="${isOpen ? 'height: auto; opacity: 1;' : 'height: 0; opacity: 0;'}">
+              <div class="month-events-inner">
+                <div class="events-grid">
+                  ${monthLeads.map(renderEventCard).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      if (!html) {
+        html = `
+          <div style="background: var(--stage-black); padding: 48px; border-radius: 14px; text-align: center; border: 1px solid var(--border-subtle);">
+            <div style="color: var(--gray-muted); margin-bottom: 8px;"><i data-lucide="search-x" style="width: 32px; height: 32px;"></i></div>
+            <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 6px;">No se encontraron eventos</h3>
+            <p style="color: var(--gray-muted); font-size: 13px;">Ajusta los términos de búsqueda o el filtro de estado.</p>
+          </div>
+        `;
+      }
+
+      container.innerHTML = html;
+      lucide.createIcons();
+    }
+
+    function renderEventCard(lead) {
+      const ev = (lead.actualEvents && lead.actualEvents[0]) || {};
+      const eventName = ev.name || lead.company + ' Conference';
+      const cityText = lead.eventCity || (lead.city ? `${lead.city}, ${lead.country}` : 'Sede por confirmar');
+      const dateText = lead.nextEventDate || lead.eventMonth;
+      const statusData = serverStore[lead.id] || { status: 'pending' };
+      const curStatus = statusData.status || 'pending';
+
+      return `
+        <div class="event-card">
+          <div>
+            <div class="card-header-line">
+              <div class="event-date-text">
+                <i data-lucide="calendar" style="width: 12px; height: 12px;"></i>
+                <span>${dateText}</span>
+              </div>
+              <div>
+                <select 
+                  class="status-select ${getStatusClass(curStatus)}"
+                  onchange="window.onCardStatusChange('${lead.id}', this.value, event)"
+                  title="Cambiar estado"
+                >
+                  <option value="pending" ${curStatus === 'pending' ? 'selected' : ''}>No contactado</option>
+                  <option value="contacted" ${curStatus === 'contacted' ? 'selected' : ''}>Contactado</option>
+                  <option value="following" ${curStatus === 'following' ? 'selected' : ''}>En seguimiento</option>
+                  <option value="confirmed" ${curStatus === 'confirmed' ? 'selected' : ''}>Confirmado</option>
+                  <option value="declined" ${curStatus === 'declined' ? 'selected' : ''}>Descartado</option>
+                </select>
+              </div>
+            </div>
+
+            <h3 class="card-title">${escapeHtml(eventName)}</h3>
+
+            <div class="card-meta-line">
+              <span class="meta-segment">
+                <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i>
+                <span>${escapeHtml(cityText)}</span>
+              </span>
+              <span>·</span>
+              <span class="meta-segment">
+                <i data-lucide="building-2" style="width: 12px; height: 12px;"></i>
+                <span>${escapeHtml(lead.company)}</span>
+              </span>
+            </div>
+
+            <div class="organizer-strip">
+              <div class="organizer-icon">
+                <i data-lucide="user-check" style="width: 16px; height: 16px;"></i>
+              </div>
+              <div class="organizer-text">
+                <div class="organizer-name">${escapeHtml(lead.fullName)}</div>
+                <div class="organizer-title">${escapeHtml(lead.title || 'Director de Eventos')}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="open-dossier-btn" onclick="window.openDossier('${lead.id}')">
+              <span>Ficha & Bitácora de Equipo</span>
+              <i data-lucide="arrow-right" style="width: 13px; height: 13px;"></i>
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    window.toggleMonth = function(monthKey) {
+      const sec = document.getElementById(`sec-${slugify(monthKey)}`);
+      const wrap = document.getElementById(`wrap-${slugify(monthKey)}`);
+      if (!sec || !wrap) return;
+
+      const isOpen = openMonths.has(monthKey);
+      if (isOpen) {
+        openMonths.delete(monthKey);
+        sec.classList.remove('is-open');
+        gsap.to(wrap, { height: 0, opacity: 0, duration: 0.3, ease: 'power2.inOut' });
+      } else {
+        openMonths.add(monthKey);
+        sec.classList.add('is-open');
+        gsap.set(wrap, { height: 'auto' });
+        const targetH = wrap.offsetHeight;
+        gsap.fromTo(wrap,
+          { height: 0, opacity: 0 },
+          {
+            height: targetH,
+            opacity: 1,
+            duration: 0.38,
+            ease: 'power2.out',
+            onComplete: () => {
+              wrap.style.height = 'auto';
+              lucide.createIcons();
+            }
+          }
+        );
+      }
+    };
+
+    window.onCardStatusChange = function(leadId, newStatus, evt) {
+      evt.stopPropagation();
+      persistStatus(leadId, newStatus);
+    };
+
+    window.openDossier = function(leadId) {
+      activeDossierLeadId = leadId;
+      refreshDossierContent(leadId);
+
+      const backdrop = document.getElementById('dossier-backdrop');
+      const drawer = document.getElementById('dossier-drawer');
+      backdrop.classList.add('active');
+
+      gsap.to(drawer, {
+        x: '0%',
+        duration: 0.35,
+        ease: 'power3.out',
+        onComplete: () => {
+          lucide.createIcons();
+        }
+      });
+    };
+
+    function refreshDossierContent(leadId) {
+      const dataset = getActiveDataset();
+      const lead = dataset.find(l => l.id === leadId);
+      if (!lead) return;
+
+      const ev = (lead.actualEvents && lead.actualEvents[0]) || {};
+      const eventName = ev.name || lead.company + ' Conference';
+      const dateText = lead.nextEventDate || lead.eventMonth;
+      const statusData = serverStore[leadId] || { status: 'pending', history: [] };
+      const curStatus = statusData.status || 'pending';
+      const savedAgent = localStorage.getItem('speakup_vps_agent') || '';
+
+      document.getElementById('drawer-event-title').textContent = eventName;
+      document.getElementById('drawer-date-str').textContent = `${dateText} · ${lead.eventCity || lead.city || 'Sede Confirmada'}`;
+
+      const historyHtml = (statusData.history && statusData.history.length > 0)
+        ? statusData.history.slice().reverse().map(entry => `
+            <div class="note-entry">
+              <div class="note-entry-meta">
+                <strong>${escapeHtml(entry.agentName || 'Agente')}</strong>
+                <span>${new Date(entry.timestamp).toLocaleDateString()} ${new Date(entry.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+              </div>
+              <div class="note-entry-text">${escapeHtml(entry.note)}</div>
+            </div>
+          `).join('')
+        : `<div style="color: var(--gray-muted); font-size: 11px; padding: 4px 0;">Sin notas registradas por el equipo todavía.</div>`;
+
+      const body = document.getElementById('drawer-body-content');
+      body.innerHTML = `
+        <div class="drawer-card">
+          <div class="drawer-card-title">
+            <i data-lucide="check-square" style="width: 14px; height: 14px;"></i>
+            <span>Estado de Contacto del Equipo</span>
+          </div>
+          <div class="status-button-grid">
+            <button class="status-btn ${curStatus === 'pending' ? 'selected' : ''}" onclick="window.onDrawerStatusSelect('${lead.id}', 'pending')">
+              <i data-lucide="clock" style="width: 12px; height: 12px;"></i>
+              <span>No contactado</span>
+            </button>
+            <button class="status-btn ${curStatus === 'contacted' ? 'selected' : ''}" onclick="window.onDrawerStatusSelect('${lead.id}', 'contacted')">
+              <i data-lucide="send" style="width: 12px; height: 12px;"></i>
+              <span>Contactado</span>
+            </button>
+            <button class="status-btn ${curStatus === 'following' ? 'selected' : ''}" onclick="window.onDrawerStatusSelect('${lead.id}', 'following')">
+              <i data-lucide="refresh-cw" style="width: 12px; height: 12px;"></i>
+              <span>En seguimiento</span>
+            </button>
+            <button class="status-btn ${curStatus === 'confirmed' ? 'selected' : ''}" onclick="window.onDrawerStatusSelect('${lead.id}', 'confirmed')">
+              <i data-lucide="check-circle-2" style="width: 12px; height: 12px;"></i>
+              <span>Confirmado</span>
+            </button>
+            <button class="status-btn ${curStatus === 'declined' ? 'selected' : ''}" onclick="window.onDrawerStatusSelect('${lead.id}', 'declined')">
+              <i data-lucide="ban" style="width: 12px; height: 12px;"></i>
+              <span>Descartado</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="drawer-card">
+          <div class="drawer-card-title">
+            <i data-lucide="id-card" style="width: 14px; height: 14px;"></i>
+            <span>Contacto Directo & Verificación</span>
+          </div>
+          <div style="font-size: 16px; font-weight: 600; color: var(--pure-white); margin-bottom: 2px;">
+            ${escapeHtml(lead.fullName)}
+          </div>
+          <div style="font-size: 12px; color: var(--gray-muted); margin-bottom: 14px;">
+            ${escapeHtml(lead.title)} · ${escapeHtml(lead.company)}
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #1C1C1C; padding: 8px 12px; border-radius: 6px;">
+              <span style="font-size: 12px; color: var(--pure-white); display: flex; align-items: center; gap: 6px;">
+                <i data-lucide="mail" style="width: 13px; height: 13px; color: var(--red-accent);"></i>
+                <span>${escapeHtml(lead.email || 'Email no disponible')}</span>
+              </span>
+              ${lead.email ? `
+                <button class="btn-solid-red" style="padding: 4px 10px; font-size: 11px;" onclick="window.copyText('${lead.email}', 'Correo copiado')">
+                  <i data-lucide="copy" style="width: 11px; height: 11px;"></i>
+                  <span>Copiar</span>
+                </button>
+              ` : ''}
+            </div>
+
+            ${lead.linkedinUrl ? `
+              <a href="${lead.linkedinUrl}" target="_blank" rel="noopener noreferrer" class="btn-outline" style="justify-content: center;">
+                <i data-lucide="external-link" style="width: 13px; height: 13px;"></i>
+                <span>Abrir Perfil de LinkedIn</span>
+              </a>
+            ` : ''}
+          </div>
+
+          <div style="background: rgba(229, 12, 19, 0.08); border: 1px solid rgba(229, 12, 19, 0.25); border-radius: 6px; padding: 10px 12px;">
+            <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--red-accent); margin-bottom: 2px;">
+              ${lead.verification ? lead.verification.badge : 'Verificación de Ciclo 2027'}
+            </div>
+            <div style="font-size: 12px; color: var(--gray-light); line-height: 1.4;">
+              ${lead.verification ? lead.verification.auditNote : 'Conferencia anual recurrente confirmada en la ventana de 5 a 10 meses.'}
+            </div>
+          </div>
+        </div>
+
+        <div class="drawer-card">
+          <div class="drawer-card-title">
+            <i data-lucide="message-square" style="width: 14px; height: 14px;"></i>
+            <span>Propuesta de Pitch Sugerida</span>
+          </div>
+          <div class="pitch-quote-box">
+            "${escapeHtml(lead.pitchHook || 'Proponer conferencia sobre liderazgo de alto impacto y escala empresarial.')}"
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn-solid-red" onclick="window.copyText('${escapeHtml(lead.pitchHook || '')}', 'Pitch copiado')">
+              <i data-lucide="copy" style="width: 13px; height: 13px;"></i>
+              <span>Copiar Propuesta</span>
+            </button>
+            ${ev.url ? `
+              <a href="${ev.url}" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                <i data-lucide="globe" style="width: 13px; height: 13px;"></i>
+                <span>Web Oficial</span>
+              </a>
+            ` : ''}
+            ${lead.cfpUrl ? `
+              <a href="${lead.cfpUrl}" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                <i data-lucide="megaphone" style="width: 13px; height: 13px;"></i>
+                <span>Portal CFP</span>
+              </a>
+            ` : ''}
+          </div>
+        </div>
+
+        <div class="drawer-card">
+          <div class="drawer-card-title">
+            <i data-lucide="file-text" style="width: 14px; height: 14px;"></i>
+            <span>Bitácora & Notas del Equipo</span>
+          </div>
+          <div class="note-input-row">
+            <input 
+              type="text" 
+              id="agent-name-input" 
+              class="agent-name-input" 
+              placeholder="Tu nombre (ej. Carlos, Sofía...)" 
+              value="${escapeHtml(savedAgent)}"
+            />
+            <textarea 
+              id="agent-note-text" 
+              class="note-textarea" 
+              placeholder="Escribe una nota sobre el contacto, respuesta del organizador o comentario..."
+            ></textarea>
+            <button class="btn-solid-red" style="align-self: flex-start;" onclick="window.saveNote('${lead.id}')">
+              <i data-lucide="plus" style="width: 13px; height: 13px;"></i>
+              <span>Guardar Nota en Servidor</span>
+            </button>
+          </div>
+
+          <div class="notes-history-list">
+            ${historyHtml}
+          </div>
+        </div>
+      `;
+
+      lucide.createIcons();
+    }
+
+    window.onDrawerStatusSelect = function(leadId, newStatus) {
+      persistStatus(leadId, newStatus);
+    };
+
+    window.saveNote = function(leadId) {
+      const nameInput = document.getElementById('agent-name-input');
+      const textInput = document.getElementById('agent-note-text');
+      const name = (nameInput ? nameInput.value.trim() : '') || 'Agente';
+      const note = textInput ? textInput.value.trim() : '';
+
+      if (!note) {
+        showToast('Escribe una nota primero');
+        return;
+      }
+
+      localStorage.setItem('speakup_vps_agent', name);
+      persistStatus(leadId, null, name, note);
+      textInput.value = '';
+    };
+
+    window.closeDossier = function() {
+      activeDossierLeadId = null;
+      const backdrop = document.getElementById('dossier-backdrop');
+      const drawer = document.getElementById('dossier-drawer');
+      backdrop.classList.remove('active');
+
+      gsap.to(drawer, {
+        x: '100%',
+        duration: 0.25,
+        ease: 'power3.in'
+      });
+    };
+
+    window.copyText = function(txt, msg) {
+      if (!txt) return;
+      navigator.clipboard.writeText(txt).then(() => {
+        showToast(msg || 'Copiado al portapapeles');
+      }).catch(() => {
+        showToast('Error al copiar');
+      });
+    };
+
+    function slugify(t) { return (t || '').toLowerCase().replace(/[^a-z0-9]+/g, '-'); }
+    function escapeHtml(s) {
+      if (!s) return '';
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    }
+    function getStatusClass(st) {
+      switch (st) {
+        case 'contacted': return 'is-contacted';
+        case 'following': return 'is-following';
+        case 'confirmed': return 'is-confirmed';
+        case 'declined': return 'is-declined';
+        default: return 'is-pending';
+      }
+    }
+
+    // INIT
+    async function initApp() {
+      // Event listeners
+      const tabGen = document.getElementById('tab-general');
+      const tabPhil = document.getElementById('tab-philip');
+      const searchInp = document.getElementById('search-input');
+      const statusFlt = document.getElementById('status-filter');
+      const backdrop = document.getElementById('dossier-backdrop');
+      const closeBtn = document.getElementById('drawer-close-btn');
+
+      if (tabGen) {
+        tabGen.addEventListener('click', () => {
+          currentView = 'general';
+          tabGen.classList.add('active');
+          if (tabPhil) tabPhil.classList.remove('active');
+          document.getElementById('main-hero-title').textContent = 'Calendario de Convocatorias 2027';
+          document.getElementById('main-hero-subtitle').textContent = 'Ventana estratégica de postulación de conferencistas (5 a 10 meses). Acceso cronológico a conferencias y organizadores verificados, con sincronización colaborativa en tiempo real para todo el equipo.';
+          updateUI();
+        });
+      }
+
+      if (tabPhil) {
+        tabPhil.addEventListener('click', () => {
+          currentView = 'philip';
+          tabPhil.classList.add('active');
+          if (tabGen) tabGen.classList.remove('active');
+          document.getElementById('main-hero-title').textContent = 'Conferencias para Philip Chan';
+          document.getElementById('main-hero-subtitle').textContent = '30 eventos seleccionados para Business Exits, Wealth, Healthcare & Leadership. Convocatorias verificadas para el perfil de Philip Chan.';
+          updateUI();
+        });
+      }
+
+      if (searchInp) {
+        searchInp.addEventListener('input', (e) => {
+          searchTerm = e.target.value.trim().toLowerCase();
+          updateUI();
+        });
+      }
+
+      if (statusFlt) {
+        statusFlt.addEventListener('change', (e) => {
+          filterStatus = e.target.value;
+          updateUI();
+        });
+      }
+
+      if (backdrop) backdrop.addEventListener('click', window.closeDossier);
+      if (closeBtn) closeBtn.addEventListener('click', window.closeDossier);
+
+      await syncFromServer();
+      updateUI();
+
+      // GSAP Reveal
+      if (window.gsap) {
+        const tl = gsap.timeline({ defaults: { ease: 'power4.inOut' } });
+        tl.to('#stage-curtain', { yPercent: -100, duration: 0.85, delay: 0.15 })
+          .from('.stage-header', { y: 20, opacity: 0, duration: 0.5, ease: 'power2.out' }, '-=0.25')
+          .from('.month-section', { y: 30, opacity: 0, stagger: 0.06, duration: 0.5, ease: 'power2.out' }, '-=0.3');
+      }
+
+      // Real-time team polling every 5 seconds for VPS multi-user collaboration
+      setInterval(() => {
+        syncFromServer(true);
+      }, 5000);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initApp);
+    } else {
+      initApp();
+    }
+  </script>
+</Layout>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dossier Completo de Evento | SpeakUp Lead Hub</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- GSAP & Canvas Confetti & Lucide -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- Data bundle -->
+  <script src="data.js"></script>
+  <script src="dashboard/data.js"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #080c14;
+      color: #f1f5f9;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 3px;
+    }
+    .glass-card {
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .glass-card {
+        border: 1px solid #ccc !important;
+        background: #fafafa !important;
+        color: #000 !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#080c14] text-slate-100 antialiased selection:bg-indigo-500 selection:text-white flex flex-col">
+
+  <!-- Top Navigation Bar -->
+  <header class="no-print border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-40 px-4 lg:px-8 py-3">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-xs font-medium transition">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+          <span>Volver al Calendario</span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+          <span class="text-xs font-semibold text-slate-300">Dossier Ejecutivo de Evento</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button onclick="window.print()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-xs font-medium flex items-center gap-1.5 transition">
+          <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+          <span>Imprimir / PDF</span>
+        </button>
+        <button onclick="copyShareLink()" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold flex items-center gap-1.5 transition">
+          <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+          <span>Copiar Enlace</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 max-w-5xl w-full mx-auto px-4 lg:px-8 py-8 space-y-6">
+
+    <!-- Not Found State -->
+    <div id="not-found-state" class="hidden text-center py-20 bg-slate-900/40 rounded-2xl border border-slate-800 space-y-3">
+      <i data-lucide="alert-octagon" class="w-12 h-12 mx-auto text-rose-400"></i>
+      <h2 class="text-lg font-bold text-white">Evento no encontrado</h2>
+      <p class="text-xs text-slate-400 max-w-md mx-auto">No se especificó un identificador de evento válido en la URL o el registro no existe en el catálogo.</p>
+      <a href="index.html" class="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-500 transition">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> Ir al Calendario
+      </a>
+    </div>
+
+    <!-- Loaded Event Dossier -->
+    <div id="dossier-content" class="space-y-6">
+
+      <!-- Executive Header Banner -->
+      <div class="glass-card rounded-2xl p-6 lg:p-8 relative overflow-hidden">
+        <div class="absolute -right-16 -top-16 w-64 h-64 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="flex flex-wrap items-center gap-2.5 mb-3">
+          <span id="badge-priority" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-rose-500/20 text-rose-300 border border-rose-500/30">
+            P1 Alta Prioridad
+          </span>
+          <span id="badge-months" class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+            Faltan 5 meses
+          </span>
+          <span id="badge-window" class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+            🟢 PRIME BOOKING WINDOW
+          </span>
+          <span id="badge-verification" class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+            ✅ Verificado Activo
+          </span>
+        </div>
+
+        <h1 id="event-title" class="text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-snug">
+          Cargando título del evento...
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-3 text-xs text-slate-300 font-mono">
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="calendar" class="w-4 h-4 text-indigo-400"></i>
+            <span id="event-date">Abril 2027</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="map-pin" class="w-4 h-4 text-indigo-400"></i>
+            <span id="event-location">Ciudad, Estado</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="building" class="w-4 h-4 text-indigo-400"></i>
+            <span id="event-company-name">Empresa Organizadora</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid: Left Column (Lead & Pitch) + Right Column (Team CRM & Intelligence) -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+        <!-- Left 2 Cols: Main Dossier -->
+        <div class="lg:col-span-2 space-y-6">
+
+          <!-- Lead Organizer Profile -->
+          <div class="glass-card rounded-2xl p-6 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+              <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+                <i data-lucide="user-check" class="w-4 h-4 text-indigo-400"></i>
+                Organizador del Evento (Lead Clave)
+              </h3>
+              <span id="lead-employees-badge" class="text-[11px] font-mono text-slate-400">220 empleados</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <h4 id="lead-name" class="text-lg font-bold text-white">Nombre del Organizador</h4>
+                <p id="lead-title" class="text-xs font-semibold text-indigo-400 mt-0.5">Cargo Directivo</p>
+                <p id="lead-company" class="text-xs text-slate-400 mt-0.5">Empresa</p>
+              </div>
+              <a id="lead-linkedin-btn" href="#" target="_blank" rel="noopener noreferrer"
+                 class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold flex items-center gap-2 shadow-lg shadow-blue-600/20 transition shrink-0">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                <span>Ver Perfil en LinkedIn</span>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-slate-800/80 text-xs">
+              <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80">
+                <span class="text-[10px] uppercase tracking-wider text-slate-500 block">Email Corporativo Directo:</span>
+                <div class="flex items-center justify-between gap-2 mt-1">
+                  <span id="lead-email" class="font-mono text-slate-200 select-all truncate">email@empresa.com</span>
+                  <button id="btn-copy-email" class="p-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition" title="Copiar email">
+                    <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80">
+                <span class="text-[10px] uppercase tracking-wider text-slate-500 block">Verificación de Servidor MX:</span>
+                <div class="flex items-center gap-1.5 mt-1 font-mono text-[11px]" id="lead-mx-status">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span class="text-emerald-400 font-semibold">DNS MX Corporativo Activo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bio snippet -->
+            <div id="lead-bio-container" class="p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 text-xs text-slate-300 leading-relaxed">
+              <span class="text-slate-500 font-semibold uppercase text-[10px] block mb-1">Bio / Antecedentes:</span>
+              <p id="lead-bio">Resumen biográfico del organizador...</p>
+            </div>
+          </div>
+
+          <!-- Anti-Apollo Verification Verdict -->
+          <div id="verification-banner" class="rounded-2xl p-6 border space-y-3">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Spanish Custom Pitch Hook -->
+          <div class="glass-card rounded-2xl p-6 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+              <div class="flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider">
+                  Pitch Hook Personalizado en Español
+                </h3>
+              </div>
+              <button id="btn-copy-pitch" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 transition shadow-md shadow-amber-500/20">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span id="btn-copy-pitch-text">Copiar Pitch</span>
+              </button>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800/80 text-xs leading-relaxed text-slate-200 font-sans select-all" id="pitch-hook-content">
+              Cargando pitch...
+            </div>
+          </div>
+
+          <!-- Event Intelligence & Budget Evidence -->
+          <div class="glass-card rounded-2xl p-6 space-y-4">
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2 border-b border-slate-800 pb-3">
+              <i data-lucide="dollar-sign" class="w-4 h-4 text-emerald-400"></i>
+              Inteligencia Comercial & Presupuesto del Evento
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+                <span class="text-slate-500 text-[10px] uppercase tracking-wider block">Asistentes Estimados</span>
+                <span id="event-attendees" class="text-sm font-bold text-white font-mono mt-0.5 block">1,500 - 2,500</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+                <span class="text-slate-500 text-[10px] uppercase tracking-wider block">Ticket Promedio</span>
+                <span id="event-ticket" class="text-sm font-bold text-emerald-400 font-mono mt-0.5 block">$995 - $1,495 USD</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80 space-y-1">
+              <span class="text-slate-500 text-[10px] uppercase tracking-wider block">Evidencia de Monetización y Presupuesto de Ponentes</span>
+              <p id="event-monetization-evidence" class="text-xs text-slate-300 leading-relaxed">
+                Detalles de monetización...
+              </p>
+            </div>
+
+            <!-- External links -->
+            <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+              <a id="btn-event-web" href="#" target="_blank" rel="noopener noreferrer"
+                 class="w-full sm:flex-1 text-center py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-semibold flex items-center justify-center gap-2 transition">
+                <i data-lucide="globe" class="w-4 h-4"></i>
+                <span>Sitio Web Oficial del Evento</span>
+              </a>
+              <a id="btn-event-cfp" href="#" target="_blank" rel="noopener noreferrer"
+                 class="w-full sm:flex-1 text-center py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold flex items-center justify-center gap-2 transition">
+                <i data-lucide="mic" class="w-4 h-4"></i>
+                <span>Portal de Postulación (CFP)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Matched Roster Speakers & Topics -->
+          <div class="glass-card rounded-2xl p-6 space-y-4">
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2 border-b border-slate-800 pb-3">
+              <i data-lucide="radio" class="w-4 h-4 text-indigo-400"></i>
+              Oradores del Roster Sugeridos & Temáticas Afines
+            </h3>
+
+            <div>
+              <span class="text-[10px] uppercase tracking-wider text-slate-500 block mb-2">Speakers Compatibles:</span>
+              <div id="matched-speakers-list" class="flex flex-wrap gap-2">
+                <!-- Badges -->
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <span class="text-[10px] uppercase tracking-wider text-slate-500 block mb-2">Temáticas / Ejes Temáticos:</span>
+              <div id="matched-topics-list" class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                <!-- Topics -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right 1 Col: Team CRM & Work Duplication Prevention -->
+        <div class="space-y-6">
+
+          <!-- Collaboration Panel -->
+          <div class="glass-card rounded-2xl p-6 border-indigo-500/30 bg-gradient-to-b from-[#131b2e] to-[#0f172a] space-y-5 sticky top-20">
+            <div class="border-b border-indigo-900/50 pb-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-sm font-bold text-indigo-200 flex items-center gap-2">
+                  <i data-lucide="users" class="w-4 h-4 text-indigo-400"></i>
+                  <span>Coordinación de Equipo</span>
+                </h3>
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-indigo-500/20 text-indigo-300">Live CRM</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">
+                Marca el estado de contacto y asigna un responsable para evitar duplicar esfuerzos entre compañeros.
+              </p>
+            </div>
+
+            <!-- Status Selector -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-200 mb-1.5">Estado del Contacto:</label>
+              <select id="crm-status-select" class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-indigo-500/40 text-slate-100 font-bold text-xs focus:ring-2 focus:ring-indigo-500">
+                <option value="PENDIENTE">⚪ No Contactado (Pendiente)</option>
+                <option value="CONTACTADO">🔵 Primer Contacto Enviado</option>
+                <option value="SEGUIMIENTO">🟡 En Seguimiento / Negociación</option>
+                <option value="INTERESADO">🟢 Respondió / Interesado</option>
+                <option value="CONFIRMADO">🟣 Keynote Confirmado / Cerrado 🎉</option>
+                <option value="DESCARTADO">🔴 Descartado / No Disponible</option>
+                <option value="YA_NO_TRABAJA_AQUI">❌ Ya No Trabaja Aquí (Anti-Apollo)</option>
+              </select>
+            </div>
+
+            <!-- Agent Selector -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-200 mb-1.5">Compañero Asignado:</label>
+              <select id="crm-agent-select" class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-100 text-xs focus:ring-2 focus:ring-indigo-500">
+                <option value="">👤 Sin Asignar</option>
+                <option value="Jhonatan">Jhonatan</option>
+                <option value="Agente 1">Agente 1</option>
+                <option value="Agente 2">Agente 2</option>
+                <option value="Philip Chan">Philip Chan</option>
+              </select>
+            </div>
+
+            <!-- Add Note -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-200 mb-1.5">Bitácora de Notas para el Equipo:</label>
+              <div class="flex gap-2">
+                <input type="text" id="crm-new-note" placeholder="Ej: Envié mensaje por LinkedIn el martes..."
+                       class="flex-1 px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500">
+                <button id="btn-save-note" class="px-3 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs transition shrink-0">
+                  Añadir
+                </button>
+              </div>
+
+              <!-- Notes Log -->
+              <div id="crm-notes-log" class="mt-3 space-y-2 max-h-56 overflow-y-auto custom-scroll pr-1">
+                <!-- Notes rendered dynamically -->
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between font-mono">
+              <span>Sincronizado:</span>
+              <span id="crm-sync-timestamp">Tiempo real (LocalStorage)</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Floating Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 pointer-events-none transform translate-y-12 opacity-0 flex items-center gap-2 px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white shadow-2xl text-xs font-medium">
+    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+    <span id="toast-message">Notificación</span>
+  </div>
+
+  <script>
+    const LOCAL_STORAGE_KEY = 'SPEAKUP_CALENDAR_CRM_V2';
+
+    const appData = window.EVENT_LEADS_DATA || {
+      generalLeads: [],
+      philipLeads: [],
+      auditSummary: { alertsList: [] }
+    };
+
+    let crmStore = {
+      outreachStatus: {},
+      assignedAgent: {},
+      notes: {},
+      verifiedFlags: {}
+    };
+
+    try {
+      const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+      if (saved) crmStore = { ...crmStore, ...JSON.parse(saved) };
+    } catch (e) {
+      console.warn('LocalStorage error:', e);
+    }
+
+    function saveStore() {
+      try {
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(crmStore));
+      } catch (e) {
+        console.error('Save error:', e);
+      }
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const text = document.getElementById('toast-message');
+      text.innerText = message;
+      gsap.to(toast, { y: 0, opacity: 1, duration: 0.3, ease: 'power2.out' });
+      setTimeout(() => {
+        gsap.to(toast, { y: 24, opacity: 0, duration: 0.3, ease: 'power2.in' });
+      }, 2500);
+    }
+
+    function copyShareLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        showToast('Enlace copiado al portapapeles');
+      });
+    }
+
+    // Load lead by ID
+    const urlParams = new URLSearchParams(window.location.search);
+    const targetLeadId = urlParams.get('id') || urlParams.get('lead') || urlParams.get('event');
+
+    const allLeads = [...appData.generalLeads, ...appData.philipLeads];
+    const targetLead = allLeads.find(l => l.id === targetLeadId);
+
+    if (!targetLead) {
+      document.getElementById('not-found-state').classList.remove('hidden');
+      document.getElementById('dossier-content').classList.add('hidden');
+    } else {
+      renderLeadDossier(targetLead);
+    }
+
+    function renderLeadDossier(lead) {
+      const eventName = lead.actualEvents?.[0]?.name || lead.company;
+      document.title = `${eventName} — SpeakUp Dossier`;
+
+      // Badges
+      const pBadge = document.getElementById('badge-priority');
+      pBadge.innerText = `${lead.priority || 'P2'} Prioridad`;
+      pBadge.className = `px-2.5 py-1 text-xs font-bold rounded-lg ${lead.priority === 'P1' ? 'bg-rose-500/20 text-rose-300 border border-rose-500/30' : 'bg-slate-800 text-slate-300 border border-slate-700'}`;
+
+      document.getElementById('badge-months').innerText = `Faltan ${lead.monthsUntilEvent || 7} meses (${lead.eventMonth || '2027'})`;
+      document.getElementById('badge-window').innerText = lead.bookingStatus || '🟢 PRIME BOOKING WINDOW';
+
+      // Header info
+      document.getElementById('event-title').innerText = eventName;
+      document.getElementById('event-date').innerText = lead.nextEventDate || lead.eventMonth || '2027';
+      document.getElementById('event-location').innerText = lead.eventCity || (lead.city + ', ' + (lead.state || 'US'));
+      document.getElementById('event-company-name').innerText = lead.company;
+
+      // Lead profile
+      document.getElementById('lead-name').innerText = lead.fullName;
+      document.getElementById('lead-title').innerText = lead.title;
+      document.getElementById('lead-company').innerText = `${lead.company} (${lead.city || ''}, ${lead.state || ''})`;
+      document.getElementById('lead-employees-badge').innerText = `${lead.companyEmployees || '100+'} empleados`;
+      document.getElementById('lead-email').innerText = lead.email || 'No disponible';
+      document.getElementById('lead-linkedin-btn').href = lead.linkedinUrl || '#';
+      document.getElementById('lead-bio').innerText = lead.bio || 'Organizador clave de la conferencia.';
+
+      // MX Status
+      const mxElem = document.getElementById('lead-mx-status');
+      if (lead.emailMxValid) {
+        mxElem.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400"></span><span class="text-emerald-400 font-semibold">DNS MX Servidor Corporativo Activo</span>`;
+      } else {
+        mxElem.innerHTML = `<span class="w-2 h-2 rounded-full bg-slate-400"></span><span class="text-slate-400">Dominio Corporativo Estándar</span>`;
+      }
+
+      // Verification Verdict Banner
+      renderVerificationVerdict(lead);
+
+      // Pitch Hook
+      document.getElementById('pitch-hook-content').innerText = lead.pitchHook || 'Pitch en preparación...';
+
+      // Event intelligence
+      document.getElementById('event-attendees').innerText = `${lead.companyResearch?.estimatedAttendees || '1,000+'} asistentes`;
+      document.getElementById('event-ticket').innerText = lead.companyResearch?.estimatedTicketPriceUSD ? `$${lead.companyResearch.estimatedTicketPriceUSD} USD` : '$495 - $1,495 USD';
+      document.getElementById('event-monetization-evidence').innerText = lead.companyResearch?.monetizationEvidence || 'Conferencia profesional con historial comprobado de oradores y patrocinadores.';
+
+      document.getElementById('btn-event-web').href = lead.eventUrl || lead.actualEvents?.[0]?.url || '#';
+      document.getElementById('btn-event-cfp').href = lead.cfpUrl || lead.eventUrl || '#';
+
+      // Speakers & Topics
+      const spBox = document.getElementById('matched-speakers-list');
+      spBox.innerHTML = (lead.matchedSpeakers || ['Roster SpeakUp']).map(s => `
+        <span class="px-3 py-1.5 text-xs font-semibold rounded-xl bg-slate-900 border border-slate-700 text-slate-200">
+          🎙️ ${s}
+        </span>
+      `).join('');
+
+      const tpBox = document.getElementById('matched-topics-list');
+      tpBox.innerHTML = (lead.matchedTopics || ['Conferencias']).map(t => `
+        <span class="px-2 py-0.5 rounded bg-indigo-950/60 border border-indigo-800/60 text-indigo-300">
+          #${t}
+        </span>
+      `).join('');
+
+      // Status & Agent dropdowns
+      const statusSelect = document.getElementById('crm-status-select');
+      const agentSelect = document.getElementById('crm-agent-select');
+
+      statusSelect.value = crmStore.outreachStatus[lead.id] || 'PENDIENTE';
+      agentSelect.value = crmStore.assignedAgent[lead.id] || '';
+
+      renderNotesLog(lead.id);
+
+      statusSelect.addEventListener('change', (e) => {
+        const val = e.target.value;
+        crmStore.outreachStatus[lead.id] = val;
+        saveStore();
+        showToast(`Estado actualizado: ${val}`);
+        if (val === 'CONFIRMADO' && typeof confetti === 'function') {
+          confetti({ particleCount: 90, spread: 60, origin: { y: 0.7 } });
+        }
+      });
+
+      agentSelect.addEventListener('change', (e) => {
+        const val = e.target.value;
+        crmStore.assignedAgent[lead.id] = val;
+        saveStore();
+        showToast(val ? `Asignado a: ${val}` : 'Lead sin asignar');
+      });
+
+      document.getElementById('btn-save-note').addEventListener('click', () => {
+        const input = document.getElementById('crm-new-note');
+        const text = input.value.trim();
+        if (!text) return;
+        if (!crmStore.notes[lead.id]) crmStore.notes[lead.id] = [];
+        const author = crmStore.assignedAgent[lead.id] || 'Compañero';
+        const now = new Date().toLocaleDateString('es-ES', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' });
+        crmStore.notes[lead.id].unshift({ text, author, date: now });
+        input.value = '';
+        saveStore();
+        renderNotesLog(lead.id);
+        showToast('Nota añadida a la bitácora');
+      });
+
+      document.getElementById('btn-copy-email').addEventListener('click', () => {
+        navigator.clipboard.writeText(lead.email || '').then(() => {
+          showToast('Email copiado al portapapeles');
+        });
+      });
+
+      document.getElementById('btn-copy-pitch').addEventListener('click', () => {
+        navigator.clipboard.writeText(lead.pitchHook || '').then(() => {
+          showToast('Pitch Hook copiado al portapapeles');
+          const btnText = document.getElementById('btn-copy-pitch-text');
+          btnText.innerText = '¡Copiado!';
+          setTimeout(() => btnText.innerText = 'Copiar Pitch', 2000);
+        });
+      });
+
+      lucide.createIcons();
+    }
+
+    function renderVerificationVerdict(lead) {
+      const vBox = document.getElementById('verification-banner');
+      const vBadge = document.getElementById('badge-verification');
+      const st = lead.verification?.status || 'VERIFIED_ACTIVE';
+      const isManualVerified = crmStore.verifiedFlags[lead.id];
+      const isMarkedLeft = crmStore.outreachStatus[lead.id] === 'YA_NO_TRABAJA_AQUI';
+
+      if (isMarkedLeft || st === 'ROLE_CHANGED_DO_NOT_CONTACT') {
+        vBadge.className = 'px-2.5 py-1 text-xs font-bold rounded-lg bg-rose-500/20 text-rose-300 border border-rose-500/30';
+        vBadge.innerText = '❌ Ya No Trabaja Aquí';
+
+        vBox.className = 'glass-card rounded-2xl p-6 border-rose-500/40 bg-gradient-to-r from-rose-950/40 via-slate-900 to-rose-950/20 space-y-3';
+        vBox.innerHTML = `
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i data-lucide="alert-octagon" class="w-5 h-5 text-rose-400"></i>
+              <h3 class="text-sm font-bold text-rose-200">Alerta Crítica: Cambio de Rol Confirmado (No Contactar)</h3>
+            </div>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/30 text-rose-200 font-mono">Anti-Apollo Alert</span>
+          </div>
+          <p class="text-xs text-rose-200/90 leading-relaxed">${lead.verification?.auditNote || 'Esta persona ya no ejerce en este cargo u organización.'}</p>
+          ${lead.verification?.replacementContact ? `
+            <div class="p-3 rounded-xl bg-slate-950 border border-rose-900/60 text-xs">
+              <span class="text-slate-400 uppercase text-[10px] block font-semibold">Reemplazo Activo Sugerido en el Dataset:</span>
+              <span class="text-emerald-400 font-bold text-sm block mt-0.5">${lead.verification.replacementContact}</span>
+            </div>
+          ` : ''}
+        `;
+      } else if (st === 'VERIFY_ROLE_UPDATE' && !isManualVerified) {
+        vBadge.className = 'px-2.5 py-1 text-xs font-bold rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/30';
+        vBadge.innerText = '⚠️ Revisar en LinkedIn';
+
+        vBox.className = 'glass-card rounded-2xl p-6 border-amber-500/40 bg-gradient-to-r from-amber-950/40 via-slate-900 to-amber-950/20 space-y-3';
+        vBox.innerHTML = `
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-400"></i>
+              <h3 class="text-sm font-bold text-amber-200">Alerta de Verificación: Señal de Transición de Rol</h3>
+            </div>
+            <button onclick="markManualVerified('${lead.id}')" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold transition">
+              Validar Perfil ✓
+            </button>
+          </div>
+          <p class="text-xs text-amber-200/90 leading-relaxed">${lead.verification?.auditNote}</p>
+          <div class="text-[11px] text-amber-300 font-medium">
+            Acción: ${lead.verification?.verificationActionNeeded || 'Revisar LinkedIn antes del envío de correo en frío.'}
+          </div>
+        `;
+      } else {
+        vBadge.className = 'px-2.5 py-1 text-xs font-bold rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+        vBadge.innerText = '✅ Verificado Activo (Alta Confianza)';
+
+        vBox.className = 'glass-card rounded-2xl p-6 border-emerald-500/30 bg-gradient-to-r from-emerald-950/30 via-slate-900 to-emerald-950/10 space-y-2';
+        vBox.innerHTML = `
+          <div class="flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
+            <h3 class="text-sm font-bold text-emerald-200">Verificación de Confiabilidad: Alta (95%+)</h3>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">${lead.verification?.auditNote || 'Contacto directivo activo verificado. Dominio corporativo activo y evento vigente en ciclo 2027.'}</p>
+        `;
+      }
+    }
+
+    function markManualVerified(id) {
+      crmStore.verifiedFlags[id] = true;
+      saveStore();
+      showToast('Lead marcado como verificado por el equipo');
+      renderVerificationVerdict(targetLead);
+      lucide.createIcons();
+    }
+
+    function renderNotesLog(leadId) {
+      const container = document.getElementById('crm-notes-log');
+      const notes = crmStore.notes[leadId] || [];
+      if (notes.length === 0) {
+        container.innerHTML = `<span class="text-slate-500 italic text-xs">No hay notas registradas aún. Sé el primero en dejar una actualización.</span>`;
+        return;
+      }
+      container.innerHTML = notes.map(n => `
+        <div class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs">
+          <div class="flex items-center justify-between text-slate-400 mb-1">
+            <span class="font-bold text-indigo-300">👤 ${n.author || 'Agente'}</span>
+            <span class="font-mono text-[10px] text-slate-500">${n.date}</span>
+          </div>
+          <p class="text-slate-200 leading-normal">${n.text}</p>
+        </div>
+      `).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

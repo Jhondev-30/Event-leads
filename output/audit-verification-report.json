@@ -1,0 +1,63 @@
+{
+  "totalLeadsAudited": 119,
+  "totalGeneralLeads": 115,
+  "totalPhilipLeads": 30,
+  "verifiedActive": 86,
+  "verifyRoleUpdate": 3,
+  "roleChangedDoNotContact": 1,
+  "needsCfpConfirmation": 29,
+  "alertsList": [
+    {
+      "id": "lead-ariel-dorsey--cmp--cmm-association-for",
+      "name": "Ariel Dorsey, CMP, CMM",
+      "title": "Former VP, Conferences & Events",
+      "company": "Association for Corporate Growth (ACG)",
+      "status": "ROLE_CHANGED_DO_NOT_CONTACT",
+      "badge": "❌ Ya No Trabaja Aquí",
+      "badgeColor": "rose",
+      "note": "Ariel Dorsey ya no ejerce como VP de Conferencias en ACG Nacional. Para ACG a nivel nacional, la Directora/VP activa confirmada en el dataset es Kate Weaver.",
+      "action": "No contactar a Ariel. Contactar a Kate Weaver (VP activa en el dataset).",
+      "replacement": "Kate Weaver (VP, Association for Corporate Growth)",
+      "linkedin": "https://www.linkedin.com/in/ariellicktondorsey"
+    },
+    {
+      "id": "lead-caitlin-fitzpatrick--cmp-kbra---former-i",
+      "name": "Caitlin Fitzpatrick, CMP",
+      "title": "Director, Conferences & Events (Former VP Speaker Affairs, IMN)",
+      "company": "KBRA / Former IMN",
+      "status": "VERIFY_ROLE_UPDATE",
+      "badge": "⚠️ Transición de Rol",
+      "badgeColor": "amber",
+      "note": "Caitlin se trasladó a KBRA en el sector financiero. Para conferencias IMN, los contactos vigentes y activos son Jill Rowe (Portfolio Delivery Director) y Julie Dienes.",
+      "action": "Para IMN contactar a Jill Rowe / Julie Dienes. Si es KBRA, validar con su perfil actual de LinkedIn.",
+      "replacement": "Jill Rowe, CMP / Julie Dienes (IMN)",
+      "linkedin": "https://www.linkedin.com/in/caitlin-fitzpatrick-cmp"
+    },
+    {
+      "id": "lead-kimberly-colletta-iqpc---former-o",
+      "name": "Kimberly Colletta",
+      "title": "Divisional Director (Former SVP, Opal Financial Group)",
+      "company": "IQPC / Former Opal Financial Group",
+      "status": "VERIFY_ROLE_UPDATE",
+      "badge": "⚠️ Validar Empresa Vigente",
+      "badgeColor": "amber",
+      "note": "Kimberly pasó de Opal Financial Group a IQPC como Divisional Director. Para summits de IQPC contactarla; para Opal Group buscar co-organizador.",
+      "action": "Revisar LinkedIn antes de escribir para confirmar si la propuesta es para IQPC o Opal.",
+      "replacement": null,
+      "linkedin": "https://www.linkedin.com/in/kimberly-colletta-239a2a12"
+    },
+    {
+      "id": "lead-angela-hudson-convoy-of-hope-",
+      "name": "Angela Hudson",
+      "title": "Events & Experience Strategist (Former Assistant Director, Designed for Life)",
+      "company": "Convoy of Hope / James River Church",
+      "status": "VERIFY_ROLE_UPDATE",
+      "badge": "⚠️ Revisar en LinkedIn",
+      "badgeColor": "amber",
+      "note": "Transición entre Convoy of Hope y conferencias Designed for Life de James River Church.",
+      "action": "Revisar LinkedIn en 30 seg para verificar evento 2027 asignado.",
+      "replacement": null,
+      "linkedin": "https://www.linkedin.com/in/angela-hudson-b9943217"
+    }
+  ]
+}

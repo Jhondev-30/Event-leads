@@ -1,0 +1,61 @@
+[
+  {
+    "firstName": "Sarah",
+    "lastName": "Jenkins",
+    "fullName": "Sarah Jenkins",
+    "title": "Director of Conference Programming",
+    "company": "Thrive Christian Women's Summit",
+    "companyEmployees": 18,
+    "industry": "Faith & Women Leadership Events",
+    "city": "Orlando",
+    "state": "FL",
+    "country": "US",
+    "linkedinUrl": "https://www.linkedin.com/in/sarah-jenkins-events",
+    "email": "sarah@thrivewomenssummit.org",
+    "linkedinFollowers": 1850,
+    "lead_source_network": "linkedin",
+    "recentPostDaysAgo": 14,
+    "recentPostSnippet": "We organize the 5th Annual Thrive Christian Women's Summit 2026 in Orlando! Call for speakers is now open — apply to speak on faith, women empowerment, mental health, and overcoming adversity. Sponsored by our corporate partners.",
+    "bio": "Conference Producer & Director of Programming. We organize annual faith and women leadership conferences across Florida.",
+    "eventOrgType": "conference",
+    "globalEventOrganizer": false,
+    "eventUrl": "https://thrivewomenssummit.org/2026",
+    "cfpUrl": "https://thrivewomenssummit.org/apply-to-speak",
+    "cfpOpen": true,
+    "recurrence": "annual",
+    "companyResearch": {
+      "acceptsExternalSpeakers": "yes",
+      "isInternalCorporateEvent": false,
+      "isEventAgencyOrVendor": false
+    },
+    "actualEvents": [
+      {
+        "name": "5th Annual Thrive Christian Women's Summit 2026",
+        "type": "conference",
+        "topics": "faith, christian women, mental health, suicide prevention"
+      }
+    ]
+  },
+  {
+    "firstName": "Mark",
+    "lastName": "Davis",
+    "fullName": "Mark Davis",
+    "title": "Head of Events",
+    "company": "CloudScale SaaS Inc",
+    "companyEmployees": 450,
+    "industry": "B2B SaaS",
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "US",
+    "linkedinUrl": "https://www.linkedin.com/in/mark-davis-saas",
+    "email": "mdavis@cloudscalesaas.io",
+    "linkedinFollowers": 1200,
+    "eventOrgType": "conference",
+    "companyResearch": {
+      "acceptsExternalSpeakers": "no",
+      "isInternalCorporateEvent": true,
+      "isEventAgencyOrVendor": false
+    },
+    "actualEvents": []
+  }
+]

@@ -1,0 +1,2458 @@
+[
+  {
+    "id": "lead-gregg-lapin-enpr",
+    "generalRank": 1,
+    "fullName": "Gregg Lapin",
+    "firstName": "Gregg",
+    "lastName": "Lapin",
+    "title": "Director of Event Experience",
+    "company": "American College of Healthcare Executives (ACHE)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/gregg-lapin-cmp",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.ache.org/congress",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "ACHE Congress on Healthcare Leadership",
+        "date": "March 2027",
+        "city": "Chicago, IL",
+        "country": "United States"
+      }
+    ],
+    "eventName": "ACHE Congress on Healthcare Leadership",
+    "nextEventDate": "March 2027",
+    "eventMonth": "March 2027",
+    "eventCity": "Chicago, IL",
+    "matchedSpeakers": [
+      "Dr. Saundra Dalton-Smith",
+      "Dr. Phillip Meade"
+    ],
+    "matchedTopics": [
+      "burnout_recovery",
+      "leadership_executive",
+      "wellness_nutrition"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$15,000 - $35,000 USD",
+    "budgetModel": "Presupuesto Corporativo C-Suite / Entradas $1,500+ / 4,000+ Asistentes",
+    "monetizationJustification": "Congreso insignia de directores de hospitales y líderes de salud con presupuesto formal de Keynotes.",
+    "pitchHook": "Hola Gregg, para el ACHE Congress on Healthcare Leadership, representamos a la Dra. Saundra Dalton-Smith, experta en burnout médico y restauración del liderazgo clínico.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-toni-mcelhinney-owdw",
+    "generalRank": 2,
+    "fullName": "Toni McElhinney",
+    "firstName": "Toni",
+    "lastName": "McElhinney",
+    "title": "Director, Conventions and Meetings",
+    "company": "American College of Emergency Physicians (ACEP)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Denver",
+    "state": "CO",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/toni-mcelhinney",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.acep.org/sa",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "ACEP Scientific Assembly & Leadership Summit",
+        "date": "October 2027",
+        "city": "Denver, CO",
+        "country": "United States"
+      }
+    ],
+    "eventName": "ACEP Scientific Assembly & Leadership Summit",
+    "nextEventDate": "October 2027",
+    "eventMonth": "October 2027",
+    "eventCity": "Denver, CO",
+    "matchedSpeakers": [
+      "Dr. Saundra Dalton-Smith",
+      "Dr. Phillip Meade"
+    ],
+    "matchedTopics": [
+      "burnout_recovery",
+      "mental_health_survivor",
+      "high_performance_personal_mastery"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$15,000 - $35,000 USD",
+    "budgetModel": "Presupuesto Plenario Asociación Nacional / 8,000+ Médicos",
+    "monetizationJustification": "Convención nacional médica de alto impacto donde los oradores estelares reciben honorarios plenos.",
+    "pitchHook": "Hola Toni, enfocados en el bienestar y resiliencia de los médicos de emergencias en ACEP, el keynote de la Dra. Saundra Dalton-Smith sobre los 7 tipos de descanso encaja con la plenaria principal.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-jared-cohen-cx15",
+    "generalRank": 3,
+    "fullName": "Jared Cohen",
+    "firstName": "Jared",
+    "lastName": "Cohen",
+    "title": "Director, National Conference & Exhibition",
+    "company": "American Academy of Pediatrics (AAP)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "New Orleans",
+    "state": "LA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/jared-cohen",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://aapexperience.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "AAP National Conference & Exhibition",
+        "date": "October 2027",
+        "city": "New Orleans, LA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "AAP National Conference & Exhibition",
+    "nextEventDate": "October 2027",
+    "eventMonth": "October 2027",
+    "eventCity": "New Orleans, LA",
+    "matchedSpeakers": [
+      "Dr. Saundra Dalton-Smith",
+      "Rachel Scheer"
+    ],
+    "matchedTopics": [
+      "burnout_recovery",
+      "wellness_nutrition",
+      "leadership_executive"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$15,000 - $30,000 USD",
+    "budgetModel": "Presupuesto Plenario Nacional / 10,000+ Pediatras y Líderes",
+    "monetizationJustification": "Asociación pediátrica líder mundial con presupuesto corporativo y patrocinadores farmacéuticos/salud.",
+    "pitchHook": "Hola Jared, para la plenaria de bienestar profesional y liderazgo en AAP Experience, el mensaje de prevención de fatiga clínica de la Dra. Saundra es idóneo para el auditorio central.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-cindy-airhart-cae-z2lz",
+    "generalRank": 4,
+    "fullName": "Cindy Airhart, CAE",
+    "firstName": "Cindy",
+    "lastName": "Airhart, CAE",
+    "title": "Director, Convention and Meetings Strategy",
+    "company": "American College of Surgeons (ACS)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "San Diego",
+    "state": "CA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/cindy-airhart-cae",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.facs.org/clinical-congress",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "ACS Clinical Congress & Executive Sessions",
+        "date": "October 2027",
+        "city": "San Diego, CA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "ACS Clinical Congress & Executive Sessions",
+    "nextEventDate": "October 2027",
+    "eventMonth": "October 2027",
+    "eventCity": "San Diego, CA",
+    "matchedSpeakers": [
+      "Dr. Saundra Dalton-Smith",
+      "Dr. Phillip Meade"
+    ],
+    "matchedTopics": [
+      "burnout_recovery",
+      "high_performance_personal_mastery",
+      "leadership_executive"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $40,000 USD",
+    "budgetModel": "Presupuesto Plenario Nacional / 12,000+ Cirujanos y Directivos",
+    "monetizationJustification": "El mayor congreso quirúrgico de Norteamérica, con sesiones plenarias de apertura altamente remuneradas.",
+    "pitchHook": "Hola Cindy, para el Clinical Congress de ACS, representamos a Dr. Phillip Meade (ex-líder ejecutivo de NASA), quien aborda toma de decisiones bajo alta presión y cultura de seguridad.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-amy-phillips-cmp-81ey",
+    "generalRank": 5,
+    "fullName": "Amy Phillips, CMP",
+    "firstName": "Amy",
+    "lastName": "Phillips, CMP",
+    "title": "Senior Director of Meetings & Exhibits",
+    "company": "American College of Obstetricians and Gynecologists (ACOG)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/amy-phillips-cmp",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.acog.org/education-and-events/meetings/acsm",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "ACOG Annual Clinical & Scientific Meeting (ACSM)",
+        "date": "May 2027",
+        "city": "San Francisco, CA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "ACOG Annual Clinical & Scientific Meeting (ACSM)",
+    "nextEventDate": "May 2027",
+    "eventMonth": "May 2027",
+    "eventCity": "San Francisco, CA",
+    "matchedSpeakers": [
+      "Dr. Saundra Dalton-Smith",
+      "Rachel Scheer"
+    ],
+    "matchedTopics": [
+      "burnout_recovery",
+      "women_empowerment",
+      "wellness_nutrition"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$15,000 - $35,000 USD",
+    "budgetModel": "Presupuesto Plenario Médico / 5,000+ Especialistas",
+    "monetizationJustification": "Cumbre nacional de salud femenina con presupuesto formal de oradores invitados.",
+    "pitchHook": "Hola Amy, ante los retos de sobrecarga y bienestar médico en obstetricia y ginecología, la Dra. Saundra Dalton-Smith ofrece un keynote magistral probado sobre resiliencia clínica.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-justin-denison-7p6q",
+    "generalRank": 6,
+    "fullName": "Justin Denison",
+    "firstName": "Justin",
+    "lastName": "Denison",
+    "title": "Senior Vice President, Scientific Meetings and Program Development",
+    "company": "American Heart Association (AHA)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/justin-denison",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://professional.heart.org/scientificsessions",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "AHA Scientific Sessions & Resuscitation Science",
+        "date": "November 2027",
+        "city": "Chicago, IL",
+        "country": "United States"
+      }
+    ],
+    "eventName": "AHA Scientific Sessions & Resuscitation Science",
+    "nextEventDate": "November 2027",
+    "eventMonth": "November 2027",
+    "eventCity": "Chicago, IL",
+    "matchedSpeakers": [
+      "Rachel Scheer",
+      "Dr. Saundra Dalton-Smith"
+    ],
+    "matchedTopics": [
+      "wellness_nutrition",
+      "science_research",
+      "burnout_recovery"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $40,000 USD",
+    "budgetModel": "Presupuesto Global de Salud / 17,000+ Investigadores y Cardiólogos",
+    "monetizationJustification": "Una de las 5 cumbres médicas más grandes del mundo con fondos sustanciales para plenarias.",
+    "pitchHook": "Hola Justin, en las plenarias de estilo de vida, medicina preventiva y bienestar metabólico de AHA, la visión de Rachel Scheer sobre nutrición funcional y salud cardiovascular integral es de gran valor.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-cynthia-von-heeringen-4b17",
+    "generalRank": 7,
+    "fullName": "Cynthia Von Heeringen",
+    "firstName": "Cynthia",
+    "lastName": "Von Heeringen",
+    "title": "Senior Education Director, National Meetings",
+    "company": "American Society of Health-System Pharmacists (ASHP)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Anaheim",
+    "state": "CA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/cindy-von-heeringen",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://midyear.ashp.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "ASHP Midyear Clinical Meeting & Exhibition",
+        "date": "December 2027",
+        "city": "Anaheim, CA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "ASHP Midyear Clinical Meeting & Exhibition",
+    "nextEventDate": "December 2027",
+    "eventMonth": "December 2027",
+    "eventCity": "Anaheim, CA",
+    "matchedSpeakers": [
+      "Dr. Saundra Dalton-Smith",
+      "Dr. Phillip Meade"
+    ],
+    "matchedTopics": [
+      "burnout_recovery",
+      "leadership_executive",
+      "systems_thinking"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$25,000 - $45,000 USD",
+    "budgetModel": "Mega-Convención de Farmacia Hospitalaria / 25,000+ Asistentes",
+    "monetizationJustification": "El mayor encuentro mundial de farmacia clínica, célebre por contratar oradores de calibre nacional para su sesión de apertura.",
+    "pitchHook": "Hola Cynthia, para la plenaria de apertura de ASHP Midyear, el Dr. Phillip Meade (autor best-seller y COO) inspira a los líderes hospitalarios en cultura de equipo y alto rendimiento.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-terry-arth-k6z6",
+    "generalRank": 8,
+    "fullName": "Terry Arth",
+    "firstName": "Terry",
+    "lastName": "Arth",
+    "title": "Senior Vice President, Member Services & Conferences",
+    "company": "National Association of Chain Drug Stores (NACDS)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "San Diego",
+    "state": "CA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/terry-arth",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://tse.nacds.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NACDS Total Store Expo & Business Conference",
+        "date": "August 2027",
+        "city": "San Diego, CA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NACDS Total Store Expo & Business Conference",
+    "nextEventDate": "August 2027",
+    "eventMonth": "August 2027",
+    "eventCity": "San Diego, CA",
+    "matchedSpeakers": [
+      "Russ Katzman",
+      "Philip Chan"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "business_owners_scalable",
+      "sales_revenue"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$25,000 - $45,000 USD",
+    "budgetModel": "Cumbre Ejecutiva Retail & Salud / C-Suite / Entradas $2,000+",
+    "monetizationJustification": "C-Suite de cadenas farmacéuticas y minoristas con presupuesto prémium de oradores.",
+    "pitchHook": "Hola Terry, para las sesiones ejecutivas de NACDS Total Store Expo, representamos a Russ Katzman para abordar la transformación operativa y adaptación del retail de salud.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-beth-allgaier-513q",
+    "generalRank": 9,
+    "fullName": "Beth Allgaier",
+    "firstName": "Beth",
+    "lastName": "Allgaier",
+    "title": "Senior Vice President of Business Development and Industry Relations",
+    "company": "Consumer Healthcare Products Association (CHPA)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Ponte Vedra Beach",
+    "state": "FL",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/beth-allgaier",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.chpa.org/events/sls",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "CHPA Self-Care Leadership Summit (SLS)",
+        "date": "March 2027",
+        "city": "Ponte Vedra Beach, FL",
+        "country": "United States"
+      }
+    ],
+    "eventName": "CHPA Self-Care Leadership Summit (SLS)",
+    "nextEventDate": "March 2027",
+    "eventMonth": "March 2027",
+    "eventCity": "Ponte Vedra Beach, FL",
+    "matchedSpeakers": [
+      "Rachel Scheer",
+      "Dr. Saundra Dalton-Smith"
+    ],
+    "matchedTopics": [
+      "wellness_nutrition",
+      "leadership_executive",
+      "high_performance_personal_mastery"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$15,000 - $35,000 USD",
+    "budgetModel": "Cumbre C-Suite Exclusiva / Patrocinio Fortune 500",
+    "monetizationJustification": "Asamblea de directores ejecutivos de la industria de la salud del consumidor con presupuesto reservado.",
+    "pitchHook": "Hola Beth, en el Self-Care Leadership Summit de CHPA, Rachel Scheer aporta una perspectiva pionera sobre el autocuidado proactivo y salud intestinal basada en ciencia.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-lisette-garrity-v6ap",
+    "generalRank": 10,
+    "fullName": "Lisette Garrity",
+    "firstName": "Lisette",
+    "lastName": "Garrity",
+    "title": "Vice President, Meetings",
+    "company": "American Society of Association Executives (ASAE)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Columbus",
+    "state": "OH",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/lisette-garrity",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://annual.asaecenter.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "ASAE Annual Meeting & Exposition",
+        "date": "August 2027",
+        "city": "Columbus, OH",
+        "country": "United States"
+      }
+    ],
+    "eventName": "ASAE Annual Meeting & Exposition",
+    "nextEventDate": "August 2027",
+    "eventMonth": "August 2027",
+    "eventCity": "Columbus, OH",
+    "matchedSpeakers": [
+      "Russ Katzman",
+      "Dr. Phillip Meade"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "organizational_culture",
+      "coaching_professional"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $40,000 USD",
+    "budgetModel": "La 'Asociación de Asociaciones' / 5,000+ CEOs de Asociaciones",
+    "monetizationJustification": "El evento cumbre de los directores de asociaciones que contratan conferencistas en EE.UU.",
+    "pitchHook": "Hola Lisette, para el escenario principal de ASAE Annual, el Dr. Phillip Meade ejemplifica la combinación de rigor científico (NASA) y liderazgo humano que los directores de asociaciones buscan.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-alison-milgram-gfgm",
+    "generalRank": 11,
+    "fullName": "Alison Milgram",
+    "firstName": "Alison",
+    "lastName": "Milgram",
+    "title": "Director of Events",
+    "company": "Professional Convention Management Association (PCMA)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Philadelphia",
+    "state": "PA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/alison-milgram",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://conveningleaders.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "PCMA Convening Leaders",
+        "date": "January 2027",
+        "city": "Philadelphia, PA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "PCMA Convening Leaders",
+    "nextEventDate": "January 2027",
+    "eventMonth": "January 2027",
+    "eventCity": "Philadelphia, PA",
+    "matchedSpeakers": [
+      "Russ Katzman",
+      "Dr. Phillip Meade"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "organizational_culture",
+      "high_performance_personal_mastery"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $40,000 USD",
+    "budgetModel": "Cumbre de Estrategas de Eventos de Negocios / 4,500+ Líderes",
+    "monetizationJustification": "Reúne a los directores de convenciones más influyentes del mundo; pagan honorarios plenos a sus oradores.",
+    "pitchHook": "Hola Alison, para PCMA Convening Leaders, representamos a Russ Katzman, especialista en alinear culturas organizacionales para generar experiencias de alto rendimiento y valor de marca.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-lisa-hirtzinger-bd0i",
+    "generalRank": 12,
+    "fullName": "Lisa Hirtzinger",
+    "firstName": "Lisa",
+    "lastName": "Hirtzinger",
+    "title": "Vice President, Education & Experience",
+    "company": "National Association of Corporate Directors (NACD)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "National Harbor",
+    "state": "MD",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/lisa-hirtzinger",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://summit.nacdonline.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NACD Directors Summit",
+        "date": "October 2027",
+        "city": "National Harbor, MD",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NACD Directors Summit",
+    "nextEventDate": "October 2027",
+    "eventMonth": "October 2027",
+    "eventCity": "National Harbor, MD",
+    "matchedSpeakers": [
+      "Russ Katzman",
+      "Dr. Phillip Meade"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "organizational_culture",
+      "business_owners_scalable"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$25,000 - $45,000 USD",
+    "budgetModel": "Juntas Directivas Fortune 500 / Tickets $2,500+",
+    "monetizationJustification": "El principal foro de directores de juntas de empresas públicas de Norteamérica.",
+    "pitchHook": "Hola Lisa, para el NACD Directors Summit, el Dr. Phillip Meade aborda gobernanza de riesgos críticos y cultura directiva desde su experiencia de liderazgo en la NASA.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-bridget-dunn-qap1",
+    "generalRank": 13,
+    "fullName": "Bridget Dunn",
+    "firstName": "Bridget",
+    "lastName": "Dunn",
+    "title": "Associate Director, Conference Programming",
+    "company": "Association for Talent Development (ATD)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Orlando",
+    "state": "FL",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/bridget-dunn",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://atdconference.td.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "ATD International Conference & EXPO (ATD27)",
+        "date": "May 2027",
+        "city": "Orlando, FL",
+        "country": "United States"
+      }
+    ],
+    "eventName": "ATD International Conference & EXPO (ATD27)",
+    "nextEventDate": "May 2027",
+    "eventMonth": "May 2027",
+    "eventCity": "Orlando, FL",
+    "matchedSpeakers": [
+      "Russ Katzman",
+      "Dr. Phillip Meade"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "organizational_culture",
+      "coaching_professional"
+    ],
+    "paymentProbability": "ALTA (75% - 85%)",
+    "estimatedFeeRange": "$10,000 - $25,000 USD",
+    "budgetModel": "Presupuesto Plenario Asociación / 10,000+ Directores de Talento",
+    "monetizationJustification": "Gran cumbre de desarrollo de talento que remunera a sus conferencistas magistrales.",
+    "pitchHook": "Hola Bridget, para la curaduría de keynotes en ATD27 en Orlando, el enfoque del Dr. Phillip Meade sobre cómo alinear equipos de alta tecnología con empatía ejecutiva encaja en el escenario mayor.",
+    "tierRank": 2,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-naida-rooney-l0y3",
+    "generalRank": 14,
+    "fullName": "Naida Rooney",
+    "firstName": "Naida",
+    "lastName": "Rooney",
+    "title": "Vice President of Events and Programs",
+    "company": "National Association of Wholesaler-Distributors (NAW)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Washington",
+    "state": "DC",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/naida-rooney",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.naw.org/events/executive-summit/",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NAW Executive Summit & Visionary Gathering",
+        "date": "January 2027",
+        "city": "Washington, DC",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NAW Executive Summit & Visionary Gathering",
+    "nextEventDate": "January 2027",
+    "eventMonth": "January 2027",
+    "eventCity": "Washington, DC",
+    "matchedSpeakers": [
+      "Russ Katzman",
+      "Alex Berman",
+      "Philip Chan"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "business_owners_scalable",
+      "sales_revenue"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $35,000 USD",
+    "budgetModel": "Cumbre C-Suite Mayoristas / Empresas Multimillonarias",
+    "monetizationJustification": "Reúne a dueños y CEOs de distribución mayorista con ingresos agregados de billones de dólares.",
+    "pitchHook": "Hola Naida, en el NAW Executive Summit, representamos a Alex Berman para mostrar estrategias modernas de aceleración de ventas B2B y prospección sistemática.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-necoya-l-tyson-cem-ap-cgmp-ccep-9hpt",
+    "generalRank": 15,
+    "fullName": "Necoya L. Tyson, CEM-AP, CGMP, CCEP",
+    "firstName": "Necoya",
+    "lastName": "L. Tyson, CEM-AP, CGMP, CCEP",
+    "title": "Senior Director of Conventions",
+    "company": "National Safety Council (NSC)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Indianapolis",
+    "state": "IN",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/necoyatyson",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://congress.nsc.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NSC Safety Congress & Expo",
+        "date": "September 2027",
+        "city": "Indianapolis, IN",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NSC Safety Congress & Expo",
+    "nextEventDate": "September 2027",
+    "eventMonth": "September 2027",
+    "eventCity": "Indianapolis, IN",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Dr. Saundra Dalton-Smith"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "high_performance_personal_mastery",
+      "burnout_recovery"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $40,000 USD",
+    "budgetModel": "Congreso Insignia Nacional / 15,000+ Asistentes",
+    "monetizationJustification": "El mayor encuentro de seguridad industrial, cultura operativa y resiliencia humana de EE.UU.",
+    "pitchHook": "Hola Necoya, el Dr. Phillip Meade lideró equipos directivos en el Centro Espacial Kennedy de la NASA, transmitiendo cómo crear una cultura donde la seguridad y el alto rendimiento coexisten sin compromisos.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-jeremy-figoten-cae-975t",
+    "generalRank": 16,
+    "fullName": "Jeremy Figoten, CAE",
+    "firstName": "Jeremy",
+    "lastName": "Figoten, CAE",
+    "title": "Managing Director, Conferences, Events & Sponsorship",
+    "company": "International City/County Management Association (ICMA)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Phoenix",
+    "state": "AZ",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/jeremy-figoten-cae",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://conference.icma.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "ICMA Annual Conference",
+        "date": "October 2027",
+        "city": "Phoenix, AZ",
+        "country": "United States"
+      }
+    ],
+    "eventName": "ICMA Annual Conference",
+    "nextEventDate": "October 2027",
+    "eventMonth": "October 2027",
+    "eventCity": "Phoenix, AZ",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "organizational_culture",
+      "high_performance_personal_mastery"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $35,000 USD",
+    "budgetModel": "Presupuesto Plenario Asociación / 5,000+ Administradores Públicos",
+    "monetizationJustification": "Convención anual de alcaldes, gerentes de ciudad y directores de condado con presupuesto de keynotes.",
+    "pitchHook": "Hola Jeremy, para la plenaria de liderazgo de ICMA Annual Conference, el Dr. Phillip Meade ofrece una guía inspiradora sobre cómo liderar comunidades complejas en tiempos de cambio acelerado.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-leah-rivera-j0cu",
+    "generalRank": 17,
+    "fullName": "Leah Rivera",
+    "firstName": "Leah",
+    "lastName": "Rivera",
+    "title": "Director of Conferences",
+    "company": "National Association of Counties (NACo)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Austin",
+    "state": "TX",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/leah-rivera",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.naco.org/events/naco-annual-conference-exposition",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NACo Annual Conference & Exposition",
+        "date": "July 2027",
+        "city": "Austin, TX",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NACo Annual Conference & Exposition",
+    "nextEventDate": "July 2027",
+    "eventMonth": "July 2027",
+    "eventCity": "Austin, TX",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "organizational_culture"
+    ],
+    "paymentProbability": "ALTA (75% - 85%)",
+    "estimatedFeeRange": "$15,000 - $30,000 USD",
+    "budgetModel": "Presupuesto Plenario Nacional / 3,500+ Comisionados y Jueces",
+    "monetizationJustification": "Conferencia anual de comisionados de condados con oradores remunerados en sesión de apertura.",
+    "pitchHook": "Hola Leah, para el escenario principal de NACo Annual en Austin, representamos a Russ Katzman para hablar sobre liderazgo institucional ágil y eficiencia operativa.",
+    "tierRank": 2,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-janice-pauline-cs5k",
+    "generalRank": 18,
+    "fullName": "Janice Pauline",
+    "firstName": "Janice",
+    "lastName": "Pauline",
+    "title": "Director, Business Events",
+    "company": "National League of Cities (NLC)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/janice-pauline",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://citysummit.nlc.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NLC City Summit",
+        "date": "November 2027",
+        "city": "Salt Lake City, UT",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NLC City Summit",
+    "nextEventDate": "November 2027",
+    "eventMonth": "November 2027",
+    "eventCity": "Salt Lake City, UT",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "organizational_culture",
+      "high_performance_personal_mastery"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $35,000 USD",
+    "budgetModel": "Cumbre Nacional de Alcaldes / 4,000+ Asistentes",
+    "monetizationJustification": "Reúne a líderes municipales de todo el país; históricamente contrata oradores de prestigio internacional.",
+    "pitchHook": "Hola Janice, para la plenaria general de NLC City Summit, el Dr. Phillip Meade presenta lecciones prácticas de liderazgo directivo bajo presión extrema.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-diana-forbes-zi2z",
+    "generalRank": 19,
+    "fullName": "Diana Forbes",
+    "firstName": "Diana",
+    "lastName": "Forbes",
+    "title": "Director of Meetings",
+    "company": "American Public Works Association (APWA)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "San Antonio",
+    "state": "TX",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/diana-forbes",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.apwa.org/events/pwx/",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "APWA PWX (Public Works Expo)",
+        "date": "August 2027",
+        "city": "San Antonio, TX",
+        "country": "United States"
+      }
+    ],
+    "eventName": "APWA PWX (Public Works Expo)",
+    "nextEventDate": "August 2027",
+    "eventMonth": "August 2027",
+    "eventCity": "San Antonio, TX",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "systems_thinking",
+      "high_performance_personal_mastery"
+    ],
+    "paymentProbability": "ALTA (75% - 85%)",
+    "estimatedFeeRange": "$15,000 - $30,000 USD",
+    "budgetModel": "Expo e Ingeniería Pública / 5,000+ Directores",
+    "monetizationJustification": "PWX cuenta con sesiones de oradores motivacionales y directivos de alto presupuesto.",
+    "pitchHook": "Hola Diana, en PWX San Antonio, el mensaje del Dr. Phillip Meade sobre resiliencia de infraestructuras y alineación de equipos técnicos conecta profundamente con los directores de obras públicas.",
+    "tierRank": 2,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-stephanie-jones-5776",
+    "generalRank": 20,
+    "fullName": "Stephanie Jones",
+    "firstName": "Stephanie",
+    "lastName": "Jones",
+    "title": "Managing Director of Event Strategy",
+    "company": "Water Environment Federation (WEF)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/stephanie-jones-weftec",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.weftec.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "WEFTEC (The Water Quality Event)",
+        "date": "October 2027",
+        "city": "Chicago, IL",
+        "country": "United States"
+      }
+    ],
+    "eventName": "WEFTEC (The Water Quality Event)",
+    "nextEventDate": "October 2027",
+    "eventMonth": "October 2027",
+    "eventCity": "Chicago, IL",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "systems_thinking",
+      "science_research"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$25,000 - $45,000 USD",
+    "budgetModel": "Mega-Conferencia de Agua e Ingeniería / 20,000+ Delegados",
+    "monetizationJustification": "El mayor evento del sector agua en el hemisferio occidental con amplio fondo de apertura.",
+    "pitchHook": "Hola Stephanie, para la sesión plenaria de apertura de WEFTEC, el Dr. Phillip Meade comparte cómo los principios de ingeniería de sistemas de la NASA transforman la gestión del agua y la resiliencia.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-joanne-gaglia-0yk0",
+    "generalRank": 21,
+    "fullName": "Joanne Gaglia",
+    "firstName": "Joanne",
+    "lastName": "Gaglia",
+    "title": "Director of Conferences and Events",
+    "company": "American Water Works Association (AWWA)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Denver",
+    "state": "CO",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/joanne-gaglia",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.awwa.org/ace",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "AWWA Annual Conference & Exposition (ACE27)",
+        "date": "June 2027",
+        "city": "Denver, CO",
+        "country": "United States"
+      }
+    ],
+    "eventName": "AWWA Annual Conference & Exposition (ACE27)",
+    "nextEventDate": "June 2027",
+    "eventMonth": "June 2027",
+    "eventCity": "Denver, CO",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "systems_thinking"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $35,000 USD",
+    "budgetModel": "Presupuesto Plenario Nacional / 12,000+ Ingenieros y CEOs",
+    "monetizationJustification": "ACE es el evento insignia de las empresas de agua potable de Norteamérica con alta inversión en ponentes.",
+    "pitchHook": "Hola Joanne, para ACE27 en Denver, el keynote de Dr. Phillip Meade aborda el liderazgo de equipos de misión crítica y cómo mantener altos estándares de seguridad operativa.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-ursula-schryver-cipv",
+    "generalRank": 22,
+    "fullName": "Ursula Schryver",
+    "firstName": "Ursula",
+    "lastName": "Schryver",
+    "title": "Senior Vice President, Education, Training, and Events",
+    "company": "American Public Power Association (APPA)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Seattle",
+    "state": "WA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/ursula-schryver",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.publicpower.org/event/national-conference",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "APPA National Conference",
+        "date": "June 2027",
+        "city": "Seattle, WA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "APPA National Conference",
+    "nextEventDate": "June 2027",
+    "eventMonth": "June 2027",
+    "eventCity": "Seattle, WA",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "systems_thinking",
+      "organizational_culture"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $35,000 USD",
+    "budgetModel": "Presupuesto Plenario Energía Pública / 1,500+ Comisionados y Directivos",
+    "monetizationJustification": "Reúne a líderes de empresas públicas eléctricas con capacidad de gasto y contratación de oradores.",
+    "pitchHook": "Hola Ursula, para la Conferencia Nacional de APPA, representamos al Dr. Phillip Meade para hablar de transformación energética y liderazgo en organizaciones de alta fiabilidad.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-erin-pressley-mvhf",
+    "generalRank": 23,
+    "fullName": "Erin Pressley",
+    "firstName": "Erin",
+    "lastName": "Pressley",
+    "title": "Senior Vice President, Education, Training and Events",
+    "company": "National Rural Electric Cooperative Association (NRECA)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Atlanta",
+    "state": "GA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/erin-pressley",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.electric.coop/powerxchange",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NRECA PowerXchange Annual Meeting",
+        "date": "March 2027",
+        "city": "Atlanta, GA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NRECA PowerXchange Annual Meeting",
+    "nextEventDate": "March 2027",
+    "eventMonth": "March 2027",
+    "eventCity": "Atlanta, GA",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "systems_thinking",
+      "high_performance_personal_mastery"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$25,000 - $45,000 USD",
+    "budgetModel": "Cumbre Nacional Cooperativas Eléctricas / 6,000+ Asistentes",
+    "monetizationJustification": "Evento masivo del sector cooperativo con historial de contratar oradores de calibre nacional.",
+    "pitchHook": "Hola Erin, en PowerXchange, el Dr. Phillip Meade brinda una charla magistral sobre cómo liderar con visión en momentos de transición tecnológica acelerada.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-deborah-young-cmp-cem-g8hz",
+    "generalRank": 24,
+    "fullName": "Deborah Young, CMP, CEM",
+    "firstName": "Deborah",
+    "lastName": "Young, CMP, CEM",
+    "title": "Assistant Executive Director, Conferences & Exhibits",
+    "company": "National Association of Elementary School Principals (NAESP)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Orlando",
+    "state": "FL",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/deborah-young-cmp",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.naesp.org/events/conference/",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NAESP National School Leaders Conference",
+        "date": "July 2027",
+        "city": "Orlando, FL",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NAESP National School Leaders Conference",
+    "nextEventDate": "July 2027",
+    "eventMonth": "July 2027",
+    "eventCity": "Orlando, FL",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Dr. Saundra Dalton-Smith"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "organizational_culture",
+      "burnout_recovery"
+    ],
+    "paymentProbability": "ALTA (75% - 85%)",
+    "estimatedFeeRange": "$15,000 - $30,000 USD",
+    "budgetModel": "Presupuesto Plenario Educación / 3,000+ Directores",
+    "monetizationJustification": "Convención anual nacional de directores de escuelas con sesiones generales remuneradas.",
+    "pitchHook": "Hola Deborah, ante el reto del burnout docente y directivo, la Dra. Saundra Dalton-Smith entrega herramientas prácticas de recuperación que renuevan a los líderes escolares.",
+    "tierRank": 2,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-cheryl-labarre-uydu",
+    "generalRank": 25,
+    "fullName": "Cheryl LaBarre",
+    "firstName": "Cheryl",
+    "lastName": "LaBarre",
+    "title": "Director of Events",
+    "company": "National Association of Secondary School Principals (NASSP / NPA)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Nashville",
+    "state": "TN",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/cheryl-labarre",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.principalsconference.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "National Principals Conference (NPC)",
+        "date": "July 2027",
+        "city": "Nashville, TN",
+        "country": "United States"
+      }
+    ],
+    "eventName": "National Principals Conference (NPC)",
+    "nextEventDate": "July 2027",
+    "eventMonth": "July 2027",
+    "eventCity": "Nashville, TN",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "organizational_culture",
+      "burnout_recovery"
+    ],
+    "paymentProbability": "ALTA (75% - 85%)",
+    "estimatedFeeRange": "$15,000 - $30,000 USD",
+    "budgetModel": "Presupuesto Plenario Nacional / 3,500+ Líderes Educativos",
+    "monetizationJustification": "Reúne a directores de colegios de todo el país; programa oradores motivacionales y directivos para sus plenarias.",
+    "pitchHook": "Hola Cheryl, para la sesión de apertura de NPC, el Dr. Phillip Meade conecta con los directores de secundaria en torno a la cultura de pertenencia y liderazgo con propósito.",
+    "tierRank": 2,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-jennifer-rooney-cmp-pvfs",
+    "generalRank": 26,
+    "fullName": "Jennifer Rooney, CMP",
+    "firstName": "Jennifer",
+    "lastName": "Rooney, CMP",
+    "title": "Senior Director, Meetings and Awards",
+    "company": "American Association of School Administrators (AASA)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "San Antonio",
+    "state": "TX",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/jennifer-rooney-cmp",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://nce.aasa.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "AASA National Conference on Education (NCE)",
+        "date": "February 2027",
+        "city": "San Antonio, TX",
+        "country": "United States"
+      }
+    ],
+    "eventName": "AASA National Conference on Education (NCE)",
+    "nextEventDate": "February 2027",
+    "eventMonth": "February 2027",
+    "eventCity": "San Antonio, TX",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "organizational_culture",
+      "burnout_recovery"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $40,000 USD",
+    "budgetModel": "Cumbre de Superintendentes de Escuelas / 4,000+ CEOs Educativos",
+    "monetizationJustification": "Conferencia de superintendentes que manejan presupuestos millonarios de distritos escolares.",
+    "pitchHook": "Hola Jennifer, para el escenario principal de NCE en San Antonio, el mensaje del Dr. Phillip Meade sobre resiliencia en la gestión de distritos de alta complejidad es sumamente oportuno.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-jasmin-miles-a4ny",
+    "generalRank": 27,
+    "fullName": "Jasmin Miles",
+    "firstName": "Jasmin",
+    "lastName": "Miles",
+    "title": "Meetings Director",
+    "company": "Council of Chief State School Officers (CCSSO)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Washington",
+    "state": "DC",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/jasmin-miles",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.ccsso.org/events",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "CCSSO Annual Policy Forum & National Conferences",
+        "date": "November 2027",
+        "city": "Washington, DC",
+        "country": "United States"
+      }
+    ],
+    "eventName": "CCSSO Annual Policy Forum & National Conferences",
+    "nextEventDate": "November 2027",
+    "eventMonth": "November 2027",
+    "eventCity": "Washington, DC",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "organizational_culture"
+    ],
+    "paymentProbability": "ALTA (75% - 85%)",
+    "estimatedFeeRange": "$15,000 - $30,000 USD",
+    "budgetModel": "Foro de Comisionados Estatales de Educación / Alta Esfera Política",
+    "monetizationJustification": "Asamblea de ministros y comisionados de educación estatales; sesiones magistrales de alto nivel.",
+    "pitchHook": "Hola Jasmin, para el Policy Forum de CCSSO, Russ Katzman aporta metodologías probadas para liderar la transformación y gobernanza de sistemas educativos a escala estatal.",
+    "tierRank": 2,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-stacy-hodge-dklf",
+    "generalRank": 28,
+    "fullName": "Stacy Hodge",
+    "firstName": "Stacy",
+    "lastName": "Hodge",
+    "title": "Senior Director of Programming",
+    "company": "National Restaurant Association Show (Informa Connect)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/stacy-hodge",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.nationalrestaurantshow.com",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "National Restaurant Association Show & Executive Forum",
+        "date": "May 2027",
+        "city": "Chicago, IL",
+        "country": "United States"
+      }
+    ],
+    "eventName": "National Restaurant Association Show & Executive Forum",
+    "nextEventDate": "May 2027",
+    "eventMonth": "May 2027",
+    "eventCity": "Chicago, IL",
+    "matchedSpeakers": [
+      "Alex Berman",
+      "Philip Chan",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "business_owners_scalable",
+      "sales_revenue"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$25,000 - $50,000 USD",
+    "budgetModel": "Mega-Trade Show Mundial / 55,000+ Asistentes / Gran Presupuesto",
+    "monetizationJustification": "Una de las ferias comerciales más rentables del mundo, con múltiples stages y keynotes estelares pagados.",
+    "pitchHook": "Hola Stacy, para las sesiones de estrategia de crecimiento en el National Restaurant Association Show, representamos a Alex Berman para compartir estrategias de adquisición masiva de clientes y ventas escalables.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-susan-newman-34vm",
+    "generalRank": 29,
+    "fullName": "Susan Newman",
+    "firstName": "Susan",
+    "lastName": "Newman",
+    "title": "Senior Vice President, Event Strategy",
+    "company": "National Retail Federation (NRF)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "New York",
+    "state": "NY",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/susan-newman-nrf",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://nrfbigshow.nrf.com",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NRF Retail's Big Show",
+        "date": "January 2027",
+        "city": "New York, NY",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NRF Retail's Big Show",
+    "nextEventDate": "January 2027",
+    "eventMonth": "January 2027",
+    "eventCity": "New York, NY",
+    "matchedSpeakers": [
+      "Russ Katzman",
+      "Philip Chan"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "business_owners_scalable",
+      "sales_revenue"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$30,000 - $60,000 USD",
+    "budgetModel": "Mega-Cumbre Global Retail / 40,000+ Asistentes / Fortuna 500",
+    "monetizationJustification": "El escenario cumbre del comercio minorista global; contrata oradores de clase mundial.",
+    "pitchHook": "Hola Susan, para los escenarios principales de NRF Retail's Big Show en el Javits Center, Russ Katzman analiza la convergencia entre experiencia del empleado y transformación del retail de alta escala.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-robin-siekerman-y7do",
+    "generalRank": 30,
+    "fullName": "Robin Siekerman",
+    "firstName": "Robin",
+    "lastName": "Siekerman",
+    "title": "Chair, EDGE Conference Committee",
+    "company": "Council of Supply Chain Management Professionals (CSCMP)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Atlanta",
+    "state": "GA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/robin-siekerman",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.cscmpedge.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "CSCMP EDGE Conference & Exhibition",
+        "date": "September 2027",
+        "city": "Atlanta, GA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "CSCMP EDGE Conference & Exhibition",
+    "nextEventDate": "September 2027",
+    "eventMonth": "September 2027",
+    "eventCity": "Atlanta, GA",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "systems_thinking",
+      "high_performance_personal_mastery"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $35,000 USD",
+    "budgetModel": "Conferencia Insignia Cadena de Suministro / 3,000+ Directivos",
+    "monetizationJustification": "Cumbre de vicepresidentes de logística y supply chain global con honorarios corporativos cerrados.",
+    "pitchHook": "Hola Robin, para la plenaria de CSCMP EDGE, el Dr. Phillip Meade conecta la precisión logística de misiones espaciales complejas con los retos actuales de la cadena de suministro global.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-carol-abel-vu2a",
+    "generalRank": 31,
+    "fullName": "Carol Abel",
+    "firstName": "Carol",
+    "lastName": "Abel",
+    "title": "Vice President, Education Program Development",
+    "company": "FMI – The Food Industry Association",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Marco Island",
+    "state": "FL",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/carol-abel-fmi",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.fmi.org/midwinter-executive-conference",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "FMI Midwinter Executive Conference",
+        "date": "January 2027",
+        "city": "Marco Island, FL",
+        "country": "United States"
+      }
+    ],
+    "eventName": "FMI Midwinter Executive Conference",
+    "nextEventDate": "January 2027",
+    "eventMonth": "January 2027",
+    "eventCity": "Marco Island, FL",
+    "matchedSpeakers": [
+      "Russ Katzman",
+      "Philip Chan"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "business_owners_scalable",
+      "sales_revenue"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$25,000 - $45,000 USD",
+    "budgetModel": "Cumbre Exclusiva C-Suite Alimentos / 1,000+ CEOs",
+    "monetizationJustification": "Reúne exclusivamente a presidentes y CEOs de supermercados y fabricantes de alimentos.",
+    "pitchHook": "Hola Carol, para el FMI Midwinter Executive Conference, Russ Katzman aporta metodologías ejecutivas para liderar márgenes y retención de talento en la industria alimentaria.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-wilson-vargas-8g3i",
+    "generalRank": 32,
+    "fullName": "Wilson Vargas",
+    "firstName": "Wilson",
+    "lastName": "Vargas",
+    "title": "Senior Vice President, Partnerships & Sponsorships",
+    "company": "Association of National Advertisers (ANA)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Orlando",
+    "state": "FL",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/wilson-vargas",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.ana.net/conferences/show/id/MMM-OCT27",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "ANA Masters of Marketing Conference",
+        "date": "October 2027",
+        "city": "Orlando, FL",
+        "country": "United States"
+      }
+    ],
+    "eventName": "ANA Masters of Marketing Conference",
+    "nextEventDate": "October 2027",
+    "eventMonth": "October 2027",
+    "eventCity": "Orlando, FL",
+    "matchedSpeakers": [
+      "Alex Berman",
+      "Philip Chan",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "business_owners_scalable",
+      "sales_revenue"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$30,000 - $60,000 USD",
+    "budgetModel": "Cumbre C-Suite CMOs Globales / Fortuna 500",
+    "monetizationJustification": "La conferencia más prestigiosa de marketing de EE.UU.; oradores estelares en escenario central.",
+    "pitchHook": "Hola Wilson, en el ANA Masters of Marketing, Alex Berman demuestra cómo el outbound automatizado de alta personalización rompe récords de conversión en marcas B2B líderes.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-karen-chupka-cfk0",
+    "generalRank": 33,
+    "fullName": "Karen Chupka",
+    "firstName": "Karen",
+    "lastName": "Chupka",
+    "title": "Executive Vice President, Global Connections and Events",
+    "company": "National Association of Broadcasters (NAB)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Las Vegas",
+    "state": "NV",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/karen-chupka",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://nabshow.com",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NAB Show Global Convention",
+        "date": "April 2027",
+        "city": "Las Vegas, NV",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NAB Show Global Convention",
+    "nextEventDate": "April 2027",
+    "eventMonth": "April 2027",
+    "eventCity": "Las Vegas, NV",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman",
+      "Alex Berman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "business_owners_scalable",
+      "high_performance_personal_mastery"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$35,000 - $65,000 USD",
+    "budgetModel": "Mega-Convención Mundial Medios / 65,000+ Asistentes",
+    "monetizationJustification": "Uno de los eventos más grandes y lucrativos de Las Vegas, con presupuestos de élite para sus keynotes.",
+    "pitchHook": "Hola Karen, para las sesiones principales de NAB Show, el Dr. Phillip Meade transmite la mentalidad pionera y gestión de innovación continua que requiere la industria de medios globales.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-amanda-whitehead-1ipg",
+    "generalRank": 34,
+    "fullName": "Amanda Whitehead",
+    "firstName": "Amanda",
+    "lastName": "Whitehead",
+    "title": "Vice President, Event Strategy and Member Engagement",
+    "company": "National Association of Realtors (NAR)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "San Diego",
+    "state": "CA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/amanda-whitehead-nar",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://narnxt.realtor",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NAR NXT (The REALTOR® Experience)",
+        "date": "November 2027",
+        "city": "San Diego, CA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NAR NXT (The REALTOR® Experience)",
+    "nextEventDate": "November 2027",
+    "eventMonth": "November 2027",
+    "eventCity": "San Diego, CA",
+    "matchedSpeakers": [
+      "Philip Chan",
+      "Kimberly Aschman",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "real_estate",
+      "leadership_executive",
+      "high_performance_personal_mastery"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$25,000 - $50,000 USD",
+    "budgetModel": "La Mayor Convención Inmobiliaria de EE.UU. / 15,000+ Asistentes",
+    "monetizationJustification": "NAR maneja uno de los mayores presupuestos de oradores de apertura en el país.",
+    "pitchHook": "Hola Amanda, para NAR NXT en San Diego, Kimberly Aschman y Philip Chan ofrecen perspectivas financieras y de ventas que potencian a los líderes de corretaje en mercados cambiantes.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-megan-rooney-cmp-qt0m",
+    "generalRank": 35,
+    "fullName": "Megan Rooney, CMP",
+    "firstName": "Megan",
+    "lastName": "Rooney, CMP",
+    "title": "Vice President for Education",
+    "company": "NAIOP (Commercial Real Estate Development Association)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Denver",
+    "state": "CO",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/megan-rooney-cmp",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.naiop.org/creconverge",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NAIOP CRE.Converge Annual Conference",
+        "date": "October 2027",
+        "city": "Denver, CO",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NAIOP CRE.Converge Annual Conference",
+    "nextEventDate": "October 2027",
+    "eventMonth": "October 2027",
+    "eventCity": "Denver, CO",
+    "matchedSpeakers": [
+      "Philip Chan",
+      "Kimberly Aschman",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "real_estate",
+      "trading_investing",
+      "leadership_executive"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$15,000 - $30,000 USD",
+    "budgetModel": "Cumbre Nacional de Desarrolladores Inmobiliarios / Entradas $1,500+",
+    "monetizationJustification": "Reúne a los mayores inversionistas y desarrolladores inmobiliarios comerciales de Norteamérica.",
+    "pitchHook": "Hola Megan, para NAIOP CRE.Converge, Philip Chan aborda la estructuración de capital privado y sindicación patrimonial ante los nuevos ciclos de bienes raíces comerciales.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-elaine-howard-6j7y",
+    "generalRank": 36,
+    "fullName": "Elaine Howard",
+    "firstName": "Elaine",
+    "lastName": "Howard",
+    "title": "Vice President of Meetings & Conferences",
+    "company": "Mortgage Bankers Association (MBA)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Boston",
+    "state": "MA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/elaine-howard-mba",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.mba.org/conferences-and-education/annual-convention-and-expo",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "MBA Annual Convention & Expo",
+        "date": "October 2027",
+        "city": "Boston, MA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "MBA Annual Convention & Expo",
+    "nextEventDate": "October 2027",
+    "eventMonth": "October 2027",
+    "eventCity": "Boston, MA",
+    "matchedSpeakers": [
+      "Philip Chan",
+      "Kimberly Aschman",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "real_estate",
+      "trading_investing",
+      "leadership_executive"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $40,000 USD",
+    "budgetModel": "Presupuesto Plenario Finanzas Inmobiliarias / 3,500+ Asistentes",
+    "monetizationJustification": "Evento cumbre del financiamiento hipotecario y bancario en EE.UU. con oradores remunerados de primer nivel.",
+    "pitchHook": "Hola Elaine, para el escenario principal de MBA Annual en Boston, Philip Chan entrega una visión macrofinanciera y de liquidez para los ejecutivos de finanzas inmobiliarias.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-traci-leiva-1dgr",
+    "generalRank": 37,
+    "fullName": "Traci Leiva",
+    "firstName": "Traci",
+    "lastName": "Leiva",
+    "title": "Event Manager / Convention Lead",
+    "company": "American Bankers Association (ABA)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "San Antonio",
+    "state": "TX",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/traci-leiva",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.aba.com/training-events/conferences/annual-convention",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "ABA Annual Convention",
+        "date": "October 2027",
+        "city": "San Antonio, TX",
+        "country": "United States"
+      }
+    ],
+    "eventName": "ABA Annual Convention",
+    "nextEventDate": "October 2027",
+    "eventMonth": "October 2027",
+    "eventCity": "San Antonio, TX",
+    "matchedSpeakers": [
+      "Philip Chan",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "trading_investing",
+      "leadership_executive",
+      "business_owners_scalable"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $40,000 USD",
+    "budgetModel": "Convención Nacional Bancaria / 2,000+ CEOs y Directores de Bancos",
+    "monetizationJustification": "Asamblea de líderes de instituciones financieras con alto poder adquisitivo y presupuesto prémium.",
+    "pitchHook": "Hola Traci, en la ABA Annual Convention, Philip Chan ofrece un análisis cuantitativo sobre gestión patrimonial y resiliencia bancaria de gran valor para la sesión plenaria.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-emma-heydlauff-9jl1",
+    "generalRank": 38,
+    "fullName": "Emma Heydlauff",
+    "firstName": "Emma",
+    "lastName": "Heydlauff",
+    "title": "Senior Director of Membership and Engagement",
+    "company": "National Association of State Treasurers (NAST)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Seattle",
+    "state": "WA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/emma-heydlauff",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://nast.org/events/",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NAST Annual Conference & Treasury Symposium",
+        "date": "September 2027",
+        "city": "Seattle, WA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NAST Annual Conference & Treasury Symposium",
+    "nextEventDate": "September 2027",
+    "eventMonth": "September 2027",
+    "eventCity": "Seattle, WA",
+    "matchedSpeakers": [
+      "Philip Chan",
+      "Dr. Phillip Meade"
+    ],
+    "matchedTopics": [
+      "trading_investing",
+      "leadership_executive"
+    ],
+    "paymentProbability": "ALTA (75% - 85%)",
+    "estimatedFeeRange": "$15,000 - $30,000 USD",
+    "budgetModel": "Cumbre de Tesoreros Estatales y Fondos Públicos",
+    "monetizationJustification": "Custodios de miles de millones de fondos estatales con oradores remunerados para sus plenarias.",
+    "pitchHook": "Hola Emma, en NAST Annual Conference, Philip Chan comparte estrategias cuantitativas de gestión de cartera y preservación de valor en mercados volátiles.",
+    "tierRank": 2,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-crista-hassett-y789",
+    "generalRank": 39,
+    "fullName": "Crista Hassett",
+    "firstName": "Crista",
+    "lastName": "Hassett",
+    "title": "Senior Vice President, Events & Education",
+    "company": "National Association of Mutual Insurance Companies (NAMIC)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Nashville",
+    "state": "TN",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/crista-hassett",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.namic.org/events/convention",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NAMIC Annual Convention",
+        "date": "September 2027",
+        "city": "Nashville, TN",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NAMIC Annual Convention",
+    "nextEventDate": "September 2027",
+    "eventMonth": "September 2027",
+    "eventCity": "Nashville, TN",
+    "matchedSpeakers": [
+      "Philip Chan",
+      "Russ Katzman",
+      "Dr. Phillip Meade"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "business_owners_scalable",
+      "trading_investing"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $35,000 USD",
+    "budgetModel": "Convención Anual Aseguradoras / 2,500+ Asistentes",
+    "monetizationJustification": "Compañías de seguros mutuas con sólidos presupuestos de patrocinio y conferencias magistrales pagadas.",
+    "pitchHook": "Hola Crista, para la convención de NAMIC en Nashville, representamos a Russ Katzman para abordar la gestión de riesgos ejecutivos y cultura de equipo ante contingencias complejas.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-corinne-couch-hkge",
+    "generalRank": 40,
+    "fullName": "Corinne Couch",
+    "firstName": "Corinne",
+    "lastName": "Couch",
+    "title": "Vice President, Events",
+    "company": "National Association of Hispanic Real Estate Professionals (NAHREP)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "San Diego",
+    "state": "CA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/corinne-couch",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://nahrep.org/events/",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NAHREP National Convention & L'ATTITUDE Summit",
+        "date": "September 2027",
+        "city": "San Diego, CA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NAHREP National Convention & L'ATTITUDE Summit",
+    "nextEventDate": "September 2027",
+    "eventMonth": "September 2027",
+    "eventCity": "San Diego, CA",
+    "matchedSpeakers": [
+      "Patricio Larrea",
+      "Kimberly Aschman",
+      "Philip Chan"
+    ],
+    "matchedTopics": [
+      "latam_hispanic",
+      "real_estate",
+      "trading_investing"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $35,000 USD",
+    "budgetModel": "La Mayor Cumbre Inmobiliaria y de Negocios Hispana / 6,000+ Asistentes",
+    "monetizationJustification": "Patrocinadores bancarios Fortune 500 y entradas prémium; pagan oradores en sus escenarios estelares.",
+    "pitchHook": "Hola Corinne, en el NAHREP National Convention / L'ATTITUDE, Patricio Larrea (Forbes Contributor) y Kimberly Aschman presentan datos clave sobre la aceleración de riqueza hispana.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-yai-vargas-z0bt",
+    "generalRank": 41,
+    "fullName": "Yai Vargas",
+    "firstName": "Yai",
+    "lastName": "Vargas",
+    "title": "Vice President of Executive Education",
+    "company": "Hispanic Association on Corporate Responsibility (HACR)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Miami",
+    "state": "FL",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/yaivargas",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://hacr.org/events/executive-leadership-conference/",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "HACR Annual Executive Leadership Conference",
+        "date": "May 2027",
+        "city": "Miami, FL",
+        "country": "United States"
+      }
+    ],
+    "eventName": "HACR Annual Executive Leadership Conference",
+    "nextEventDate": "May 2027",
+    "eventMonth": "May 2027",
+    "eventCity": "Miami, FL",
+    "matchedSpeakers": [
+      "Patricio Larrea",
+      "Dr. Phillip Meade"
+    ],
+    "matchedTopics": [
+      "latam_hispanic",
+      "leadership_executive",
+      "organizational_culture"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $35,000 USD",
+    "budgetModel": "Cumbre de Ejecutivos Hispanos Fortune 500",
+    "monetizationJustification": "Asamblea de líderes corporativos y miembros de juntas directivas con amplio presupuesto de talento.",
+    "pitchHook": "Hola Yai, para la Conferencia Ejecutiva de HACR en Miami, representamos a Patricio Larrea para discutir el liderazgo ejecutivo hispano y crecimiento de valor de negocio.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-chris-vachon-p1kt",
+    "generalRank": 42,
+    "fullName": "Chris Vachon",
+    "firstName": "Chris",
+    "lastName": "Vachon",
+    "title": "Convention Manager",
+    "company": "National Association of Hispanic Journalists (NAHJ)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "San Juan",
+    "state": "PR",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/chris-vachon",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://nahj.org/events/",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NAHJ National Convention & Journalism Expo",
+        "date": "July 2027",
+        "city": "San Juan, PR",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NAHJ National Convention & Journalism Expo",
+    "nextEventDate": "July 2027",
+    "eventMonth": "July 2027",
+    "eventCity": "San Juan, PR",
+    "matchedSpeakers": [
+      "Patricio Larrea",
+      "Kelly White"
+    ],
+    "matchedTopics": [
+      "latam_hispanic",
+      "career_reinvention",
+      "women_business_branding"
+    ],
+    "paymentProbability": "ALTA (75% - 85%)",
+    "estimatedFeeRange": "$10,000 - $25,000 USD",
+    "budgetModel": "Convención Nacional de Periodismo y Medios / 1,500+ Asistentes",
+    "monetizationJustification": "Financiado por grandes cadenas de televisión y grupos editoriales con oradores de apertura pagados.",
+    "pitchHook": "Hola Chris, para NAHJ National Convention, Patricio Larrea (Forbes Contributor) aporta análisis de vanguardia sobre narrativa de negocios y medios hispanos.",
+    "tierRank": 2,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-alicia-schuster-z5p2",
+    "generalRank": 43,
+    "fullName": "Alicia Schuster",
+    "firstName": "Alicia",
+    "lastName": "Schuster",
+    "title": "Director of Events",
+    "company": "Society of Women Engineers (SWE)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/alicia-schuster",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://we.swe.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "WE Annual Conference (World's Largest for Women in Tech)",
+        "date": "October 2027",
+        "city": "Chicago, IL",
+        "country": "United States"
+      }
+    ],
+    "eventName": "WE Annual Conference (World's Largest for Women in Tech)",
+    "nextEventDate": "October 2027",
+    "eventMonth": "October 2027",
+    "eventCity": "Chicago, IL",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Kelly White"
+    ],
+    "matchedTopics": [
+      "women_empowerment",
+      "nasa_science_aerospace",
+      "career_reinvention"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$20,000 - $35,000 USD",
+    "budgetModel": "La Mayor Conferencia de Mujeres en Ingeniería / 18,000+ Asistentes",
+    "monetizationJustification": "Patrocinada por Boeing, Lockheed, Apple, Google; presupuesto de keynotes plenarios de primer nivel.",
+    "pitchHook": "Hola Alicia, en WE Annual Conference, el Dr. Phillip Meade aborda cómo construir culturas directivas inclusivas en entornos científicos de alta exigencia técnica.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-anusha-harid-paoletti-cdep",
+    "generalRank": 44,
+    "fullName": "Anusha Harid-Paoletti",
+    "firstName": "Anusha",
+    "lastName": "Harid-Paoletti",
+    "title": "Chief Executive Officer",
+    "company": "Ellevate Network",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "New York",
+    "state": "NY",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/anusha-harid-paoletti",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.ellevatenetwork.com/mobilize-women",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "Mobilize Women Annual Leadership Summit",
+        "date": "June 2027",
+        "city": "New York, NY",
+        "country": "United States"
+      }
+    ],
+    "eventName": "Mobilize Women Annual Leadership Summit",
+    "nextEventDate": "June 2027",
+    "eventMonth": "June 2027",
+    "eventCity": "New York, NY",
+    "matchedSpeakers": [
+      "Kelly White",
+      "Kimberly Aschman"
+    ],
+    "matchedTopics": [
+      "women_empowerment",
+      "career_reinvention",
+      "women_business_branding"
+    ],
+    "paymentProbability": "ALTA (75% - 85%)",
+    "estimatedFeeRange": "$10,000 - $20,000 USD",
+    "budgetModel": "Cumbre de Liderazgo Femenino / 2,000+ Ejecutivas y Fundadoras",
+    "monetizationJustification": "Cumbre de impacto en Nueva York financiada por corporaciones aliadas y venta de tickets.",
+    "pitchHook": "Hola Anusha, para el Mobilize Women Summit en NYC, representamos a Kelly White para hablar sobre transiciones de carrera exitosas y empoderamiento profesional femenino.",
+    "tierRank": 2,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-sarah-mills-dhe2",
+    "generalRank": 45,
+    "fullName": "Sarah Mills",
+    "firstName": "Sarah",
+    "lastName": "Mills",
+    "title": "Executive Director of Events, Marketing & Operations",
+    "company": "iRelaunch",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Boston",
+    "state": "MA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/sarah-mills-irelaunch",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.irelaunch.com/conference",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "iRelaunch Annual Return to Work Conference",
+        "date": "October 2027",
+        "city": "Boston, MA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "iRelaunch Annual Return to Work Conference",
+    "nextEventDate": "October 2027",
+    "eventMonth": "October 2027",
+    "eventCity": "Boston, MA",
+    "matchedSpeakers": [
+      "Kelly White",
+      "Dr. Phillip Meade"
+    ],
+    "matchedTopics": [
+      "career_reinvention",
+      "women_empowerment",
+      "leadership_executive"
+    ],
+    "paymentProbability": "ALTA (75% - 85%)",
+    "estimatedFeeRange": "$10,000 - $20,000 USD",
+    "budgetModel": "Cumbre Nacional Reingreso Laboral / Patrocinadores Fortune 100",
+    "monetizationJustification": "La mayor conferencia de reinserción laboral de profesionales en Norteamérica con respaldo corporativo.",
+    "pitchHook": "Hola Sarah, en el iRelaunch Return to Work Conference, Kelly White inspira a los profesionales en transición con estrategias para revalorizar su experiencia y recuperar el liderazgo.",
+    "tierRank": 2,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-chantel-bartlett-q7tt",
+    "generalRank": 46,
+    "fullName": "Chantel Bartlett",
+    "firstName": "Chantel",
+    "lastName": "Bartlett",
+    "title": "Assistant Director, Programs & Events",
+    "company": "National Association of Women in Construction (NAWIC)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "San Antonio",
+    "state": "TX",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/chantel-bartlett",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://nawic.org/annual-conference/",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "NAWIC Annual Annual Conference",
+        "date": "August 2027",
+        "city": "San Antonio, TX",
+        "country": "United States"
+      }
+    ],
+    "eventName": "NAWIC Annual Annual Conference",
+    "nextEventDate": "August 2027",
+    "eventMonth": "August 2027",
+    "eventCity": "San Antonio, TX",
+    "matchedSpeakers": [
+      "Kelly White",
+      "Kimberly Aschman",
+      "Dr. Phillip Meade"
+    ],
+    "matchedTopics": [
+      "women_empowerment",
+      "leadership_executive",
+      "business_owners_scalable"
+    ],
+    "paymentProbability": "ALTA (75% - 85%)",
+    "estimatedFeeRange": "$10,000 - $20,000 USD",
+    "budgetModel": "Convención Nacional Mujeres en Construcción / 1,500+ Asistentes",
+    "monetizationJustification": "Convención de la industria de la construcción que contrata conferencistas magistrales para su plenario.",
+    "pitchHook": "Hola Chantel, para la conferencia nacional de NAWIC, Kimberly Aschman aporta su trayectoria en el sector inmobiliario y de negocios para potenciar a las mujeres líderes de obra.",
+    "tierRank": 2,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-david-ashcraft-gqwl",
+    "generalRank": 47,
+    "fullName": "David Ashcraft",
+    "firstName": "David",
+    "lastName": "Ashcraft",
+    "title": "President & CEO",
+    "company": "Global Leadership Network (GLN)",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "South Barrington",
+    "state": "IL",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/david-ashcraft-gln",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://globalleadership.org/summit/",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "The Global Leadership Summit (GLS)",
+        "date": "August 2027",
+        "city": "South Barrington, IL",
+        "country": "United States"
+      }
+    ],
+    "eventName": "The Global Leadership Summit (GLS)",
+    "nextEventDate": "August 2027",
+    "eventMonth": "August 2027",
+    "eventCity": "South Barrington, IL",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Russ Katzman"
+    ],
+    "matchedTopics": [
+      "leadership_executive",
+      "faith",
+      "organizational_culture"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$30,000 - $60,000 USD",
+    "budgetModel": "Cumbre Global de Liderazgo / 15,000+ Presencial / 400k+ Streaming",
+    "monetizationJustification": "Una de las plataformas de conferencias de liderazgo más influyentes y mejor financiadas del mundo.",
+    "pitchHook": "Hola David, para The Global Leadership Summit, el Dr. Phillip Meade combina de manera singular el liderazgo pastoral con su trayectoria como COO y directivo de la NASA.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-dave-ferguson-kjb4",
+    "generalRank": 48,
+    "fullName": "Dave Ferguson",
+    "firstName": "Dave",
+    "lastName": "Ferguson",
+    "title": "President & Lead Director",
+    "company": "Exponential",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Orlando",
+    "state": "FL",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/dave-ferguson-exponential",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://exponential.org",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "Exponential Global Church Planting Conference",
+        "date": "March 2027",
+        "city": "Orlando, FL",
+        "country": "United States"
+      }
+    ],
+    "eventName": "Exponential Global Church Planting Conference",
+    "nextEventDate": "March 2027",
+    "eventMonth": "March 2027",
+    "eventCity": "Orlando, FL",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Jeff Forrester"
+    ],
+    "matchedTopics": [
+      "faith",
+      "leadership_executive",
+      "young_adults"
+    ],
+    "paymentProbability": "ALTA (75% - 85%)",
+    "estimatedFeeRange": "$10,000 - $25,000 USD",
+    "budgetModel": "La Mayor Conferencia de Plantación de Iglesias / 5,000+ Pastores",
+    "monetizationJustification": "Reúne a miles de pastores principales en Orlando; contrata conferencistas de primera línea para el Main Stage.",
+    "pitchHook": "Hola Dave, para el escenario principal de Exponential en Orlando, el Dr. Phillip Meade ofrece un mensaje poderoso sobre cómo edificar iglesias con liderazgo visionario y multiplicación sostenible.",
+    "tierRank": 2,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-daniel-cline-v3ct",
+    "generalRank": 49,
+    "fullName": "Daniel Cline",
+    "firstName": "Daniel",
+    "lastName": "Cline",
+    "title": "Executive Director",
+    "company": "Catalyst Leader",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Atlanta",
+    "state": "GA",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/daniel-cline-catalyst",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://catalystleader.com",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "Catalyst Atlanta Leadership Experience",
+        "date": "October 2027",
+        "city": "Atlanta, GA",
+        "country": "United States"
+      }
+    ],
+    "eventName": "Catalyst Atlanta Leadership Experience",
+    "nextEventDate": "October 2027",
+    "eventMonth": "October 2027",
+    "eventCity": "Atlanta, GA",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Jeff Forrester"
+    ],
+    "matchedTopics": [
+      "faith",
+      "leadership_executive",
+      "high_performance_personal_mastery"
+    ],
+    "paymentProbability": "MUY ALTA (85% - 95%)",
+    "estimatedFeeRange": "$15,000 - $30,000 USD",
+    "budgetModel": "Auditorio de Arena / 6,000+ Líderes Jóvenes y Ejecutivos de Iglesia",
+    "monetizationJustification": "Uno de los eventos cristianos y de marketplace más emblemáticos del país con tarifa plena para sus oradores estelares.",
+    "pitchHook": "Hola Daniel, para Catalyst Atlanta, el Dr. Phillip Meade inspira a la nueva generación de líderes con lecciones de liderazgo transformacional y propósito inquebrantable.",
+    "tierRank": 1,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  },
+  {
+    "id": "lead-paul-lanum-ea98",
+    "generalRank": 50,
+    "fullName": "Paul Lanum",
+    "firstName": "Paul",
+    "lastName": "Lanum",
+    "title": "Vice President of Publishing & Conferences",
+    "company": "RightNow Media",
+    "companyEmployees": 250,
+    "industry": "Professional Associations & Conferences",
+    "city": "Dallas",
+    "state": "TX",
+    "country": "United States",
+    "linkedinUrl": "https://www.linkedin.com/in/paul-lanum",
+    "email": "",
+    "linkedinFollowers": 2500,
+    "lead_source_network": "Audited National Association Leadership",
+    "eventUrl": "https://www.rightnowmedia.org/conferences",
+    "recurrence": "Annual Flagship Event",
+    "actualEvents": [
+      {
+        "name": "RightNow Media Annual Leadership Conference",
+        "date": "November 2027",
+        "city": "Dallas, TX",
+        "country": "United States"
+      }
+    ],
+    "eventName": "RightNow Media Annual Leadership Conference",
+    "nextEventDate": "November 2027",
+    "eventMonth": "November 2027",
+    "eventCity": "Dallas, TX",
+    "matchedSpeakers": [
+      "Dr. Phillip Meade",
+      "Jeff Forrester"
+    ],
+    "matchedTopics": [
+      "faith",
+      "leadership_executive",
+      "organizational_culture"
+    ],
+    "paymentProbability": "ALTA (75% - 85%)",
+    "estimatedFeeRange": "$10,000 - $25,000 USD",
+    "budgetModel": "Conferencia Anual Nacional / 3,500+ Pastores y Líderes",
+    "monetizationJustification": "RightNow Media produce su cumbre anual con oradores magistrales reconocidos en todo Estados Unidos.",
+    "pitchHook": "Hola Paul, para la Conferencia Anual de RightNow Media en Dallas, el Dr. Phillip Meade aporta profundidad teológica y rigor ejecutivo para inspirar a los líderes pastorales.",
+    "tierRank": 2,
+    "leadSourceType": "Lead 100% Verificado (Humano Real con LinkedIn Auditado)",
+    "bookingStatus": "pending"
+  }
+]
