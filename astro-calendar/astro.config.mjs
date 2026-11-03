@@ -1,14 +1,10 @@
 import { defineConfig } from 'astro/config';
-import node from '@astrojs/node';
+import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  adapter: node({
-    mode: 'standalone'
-  }),
-  server: {
-    port: process.env.PORT ? parseInt(process.env.PORT) : 4321,
-    host: true
-  }
+  adapter: cloudflare({
+    imageService: 'passthrough'
+  })
 });

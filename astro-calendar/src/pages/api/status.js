@@ -1,42 +1,40 @@
-import fs from 'node:fs';
-import path from 'node:path';
-
 export const prerender = false;
 
-// Store status-store.json in data directory or root
-const DATA_DIR = path.resolve(process.cwd(), 'data');
-if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-}
+// Fallback in-memory store for dev or when KV is not yet bound
+let inMemoryStore = {};
 
-const STATUS_FILE = path.join(DATA_DIR, 'status-store.json');
-
-// Initialize if absent
-if (!fs.existsSync(STATUS_FILE)) {
-  fs.writeFileSync(STATUS_FILE, JSON.stringify({}, null, 2), 'utf8');
-}
-
-function getStore() {
-  try {
-    const raw = fs.readFileSync(STATUS_FILE, 'utf8');
-    return JSON.parse(raw);
-  } catch (e) {
-    return {};
+async function getStore(env) {
+  if (env && env.STATUS_STORE) {
+    try {
+      const data = await env.STATUS_STORE.get('lead_status_store', 'json');
+      if (data && typeof data === 'object') {
+        return data;
+      }
+    } catch (e) {
+      console.error('Error reading from Cloudflare KV:', e);
+    }
   }
+  return inMemoryStore;
 }
 
-function saveStore(data) {
-  try {
-    fs.writeFileSync(STATUS_FILE, JSON.stringify(data, null, 2), 'utf8');
-    return true;
-  } catch (e) {
-    console.error('Failed to write status store:', e);
-    return false;
+async function saveStore(env, data) {
+  inMemoryStore = data;
+  if (env && env.STATUS_STORE) {
+    try {
+      await env.STATUS_STORE.put('lead_status_store', JSON.stringify(data));
+      return true;
+    } catch (e) {
+      console.error('Error saving to Cloudflare KV:', e);
+      return false;
+    }
   }
+  return true;
 }
 
-export async function GET({ request }) {
-  const store = getStore();
+export async function GET(context) {
+  const env = context.locals?.runtime?.env || process.env;
+  const store = await getStore(env);
+
   return new Response(JSON.stringify({ ok: true, store }), {
     status: 200,
     headers: {
@@ -47,9 +45,9 @@ export async function GET({ request }) {
   });
 }
 
-export async function POST({ request }) {
+export async function POST(context) {
   try {
-    const payload = await request.json();
+    const payload = await context.request.json();
     const { leadId, status, agentName, note } = payload;
 
     if (!leadId) {
@@ -59,7 +57,9 @@ export async function POST({ request }) {
       });
     }
 
-    const store = getStore();
+    const env = context.locals?.runtime?.env || process.env;
+    const store = await getStore(env);
+    
     const current = store[leadId] || {
       status: 'pending',
       history: []
@@ -86,7 +86,7 @@ export async function POST({ request }) {
     current.lastAgent = author;
 
     store[leadId] = current;
-    saveStore(store);
+    await saveStore(env, store);
 
     return new Response(JSON.stringify({ ok: true, leadData: current, store }), {
       status: 200,
