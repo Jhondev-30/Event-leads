@@ -3,10 +3,16 @@ export const prerender = false;
 // Fallback in-memory store for dev or when KV is not yet bound
 let inMemoryStore = {};
 
+function getKV(env) {
+  if (!env) return null;
+  return env.STATUS || env.STATUS_STORE || null;
+}
+
 async function getStore(env) {
-  if (env && env.STATUS_STORE) {
+  const kv = getKV(env);
+  if (kv) {
     try {
-      const data = await env.STATUS_STORE.get('lead_status_store', 'json');
+      const data = await kv.get('lead_status_store', 'json');
       if (data && typeof data === 'object') {
         return data;
       }
@@ -19,9 +25,10 @@ async function getStore(env) {
 
 async function saveStore(env, data) {
   inMemoryStore = data;
-  if (env && env.STATUS_STORE) {
+  const kv = getKV(env);
+  if (kv) {
     try {
-      await env.STATUS_STORE.put('lead_status_store', JSON.stringify(data));
+      await kv.put('lead_status_store', JSON.stringify(data));
       return true;
     } catch (e) {
       console.error('Error saving to Cloudflare KV:', e);
