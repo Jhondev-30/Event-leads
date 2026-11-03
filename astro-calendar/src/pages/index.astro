@@ -957,13 +957,52 @@ export const prerender = false;
       'December 2027': { label: 'Diciembre 2027', windowTag: 'Faltan 13 meses', desc: 'Encuentros anuales de evaluación y planificación' }
     };
 
+    function loadLocalStore() {
+      try {
+        const raw = localStorage.getItem('speakup_leads_store');
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed && typeof parsed === 'object') {
+            serverStore = { ...parsed, ...serverStore };
+          }
+        }
+      } catch (e) {
+        console.warn('LocalStorage error:', e);
+      }
+    }
+
+    function saveLocalStore() {
+      try {
+        localStorage.setItem('speakup_leads_store', JSON.stringify(serverStore));
+      } catch (e) {
+        console.warn('LocalStorage save error:', e);
+      }
+    }
+
+    function mergeStores(local, server) {
+      const merged = { ...local };
+      for (const [id, sData] of Object.entries(server)) {
+        if (!merged[id]) {
+          merged[id] = sData;
+        } else {
+          const localTime = new Date(merged[id].lastUpdated || 0).getTime();
+          const serverTime = new Date(sData.lastUpdated || 0).getTime();
+          if (serverTime >= localTime) {
+            merged[id] = sData;
+          }
+        }
+      }
+      return merged;
+    }
+
     async function syncFromServer(silent = false) {
       try {
         const res = await fetch('/api/status', { cache: 'no-store' });
         if (res.ok) {
           const json = await res.json();
           if (json.ok && json.store) {
-            serverStore = json.store;
+            serverStore = mergeStores(serverStore, json.store);
+            saveLocalStore();
             updateUI();
             if (activeDossierLeadId) {
               refreshDossierContent(activeDossierLeadId);
@@ -977,6 +1016,34 @@ export const prerender = false;
 
     async function persistStatus(leadId, newStatus, agentName = '', noteText = '') {
       const author = agentName || localStorage.getItem('speakup_vps_agent') || 'Equipo';
+      
+      // 1. Guardado inmediato y optimista en navegador (evita que se pierda al recargar)
+      if (!serverStore[leadId]) {
+        serverStore[leadId] = { status: 'pending', history: [] };
+      }
+      if (newStatus) {
+        serverStore[leadId].status = newStatus;
+      }
+      if (!serverStore[leadId].history) serverStore[leadId].history = [];
+      if (noteText || newStatus) {
+        serverStore[leadId].history.push({
+          timestamp: new Date().toISOString(),
+          agentName: author,
+          status: newStatus || serverStore[leadId].status,
+          note: noteText || (newStatus ? `Estado cambiado a ${newStatus}` : '')
+        });
+      }
+      serverStore[leadId].lastUpdated = new Date().toISOString();
+      serverStore[leadId].lastAgent = author;
+
+      saveLocalStore();
+      updateUI();
+      if (activeDossierLeadId) {
+        refreshDossierContent(activeDossierLeadId);
+      }
+      showToast('Guardado');
+
+      // 2. Sincronización con la nube (Cloudflare)
       try {
         const res = await fetch('/api/status', {
           method: 'POST',
@@ -991,16 +1058,16 @@ export const prerender = false;
         if (res.ok) {
           const json = await res.json();
           if (json.ok && json.store) {
-            serverStore = json.store;
+            serverStore = mergeStores(serverStore, json.store);
+            saveLocalStore();
             updateUI();
             if (activeDossierLeadId) {
               refreshDossierContent(activeDossierLeadId);
             }
-            showToast('Actualizado en el servidor');
           }
         }
       } catch (err) {
-        showToast('Error de conexión al servidor');
+        console.warn('Offline mode: cambios guardados en localStorage');
       }
     }
 
@@ -1517,6 +1584,11 @@ export const prerender = false;
       if (backdrop) backdrop.addEventListener('click', window.closeDossier);
       if (closeBtn) closeBtn.addEventListener('click', window.closeDossier);
 
+      // Carga inmediata de cambios guardados en el navegador
+      loadLocalStore();
+      updateUI();
+
+      // Sincronización en segundo plano con el servidor / Cloudflare KV
       await syncFromServer();
       updateUI();
 
