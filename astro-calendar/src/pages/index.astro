@@ -1005,7 +1005,7 @@ export const prerender = false;
             saveLocalStore();
             updateUI();
             if (activeDossierLeadId) {
-              refreshDossierContent(activeDossierLeadId);
+              updateDossierState(activeDossierLeadId);
             }
           }
         }
@@ -1039,9 +1039,9 @@ export const prerender = false;
       saveLocalStore();
       updateUI();
       if (activeDossierLeadId) {
-        refreshDossierContent(activeDossierLeadId);
+        updateDossierState(activeDossierLeadId);
       }
-      showToast('Guardado');
+      showToast(noteText ? 'Nota guardada' : 'Estado actualizado');
 
       // 2. Sincronización con la nube (Cloudflare)
       try {
@@ -1062,7 +1062,7 @@ export const prerender = false;
             saveLocalStore();
             updateUI();
             if (activeDossierLeadId) {
-              refreshDossierContent(activeDossierLeadId);
+              updateDossierState(activeDossierLeadId);
             }
           }
         }
@@ -1299,7 +1299,7 @@ export const prerender = false;
 
     window.openDossier = function(leadId) {
       activeDossierLeadId = leadId;
-      refreshDossierContent(leadId);
+      renderDossierInitial(leadId);
 
       const backdrop = document.getElementById('dossier-backdrop');
       const drawer = document.getElementById('dossier-drawer');
@@ -1315,7 +1315,47 @@ export const prerender = false;
       });
     };
 
-    function refreshDossierContent(leadId) {
+    function renderHistoryHtml(statusData) {
+      if (!statusData || !statusData.history || statusData.history.length === 0) {
+        return `<div style="color: var(--gray-muted); font-size: 11px; padding: 4px 0;">Sin notas registradas por el equipo todavía.</div>`;
+      }
+      return statusData.history.slice().reverse().map(entry => `
+        <div class="note-entry">
+          <div class="note-entry-meta">
+            <strong>${escapeHtml(entry.agentName || 'Agente')}</strong>
+            <span>${new Date(entry.timestamp).toLocaleDateString()} ${new Date(entry.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+          </div>
+          <div class="note-entry-text">${escapeHtml(entry.note)}</div>
+        </div>
+      `).join('');
+    }
+
+    function updateDossierState(leadId) {
+      if (!activeDossierLeadId || activeDossierLeadId !== leadId) return;
+      const statusData = serverStore[leadId] || { status: 'pending', history: [] };
+      const curStatus = statusData.status || 'pending';
+
+      const drawer = document.getElementById('drawer-body-content');
+      if (drawer) {
+        // Actualiza botones de estado sin tocar el formulario
+        drawer.querySelectorAll('.status-btn').forEach(btn => {
+          const btnStatus = btn.getAttribute('data-status');
+          if (btnStatus === curStatus) {
+            btn.classList.add('selected');
+          } else {
+            btn.classList.remove('selected');
+          }
+        });
+
+        // Actualiza únicamente la lista de notas histórica
+        const historyContainer = document.getElementById('drawer-notes-history');
+        if (historyContainer) {
+          historyContainer.innerHTML = renderHistoryHtml(statusData);
+        }
+      }
+    }
+
+    function renderDossierInitial(leadId) {
       const dataset = getActiveDataset();
       const lead = dataset.find(l => l.id === leadId);
       if (!lead) return;
@@ -1330,17 +1370,7 @@ export const prerender = false;
       document.getElementById('drawer-event-title').textContent = eventName;
       document.getElementById('drawer-date-str').textContent = `${dateText} · ${lead.eventCity || lead.city || 'Sede Confirmada'}`;
 
-      const historyHtml = (statusData.history && statusData.history.length > 0)
-        ? statusData.history.slice().reverse().map(entry => `
-            <div class="note-entry">
-              <div class="note-entry-meta">
-                <strong>${escapeHtml(entry.agentName || 'Agente')}</strong>
-                <span>${new Date(entry.timestamp).toLocaleDateString()} ${new Date(entry.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
-              </div>
-              <div class="note-entry-text">${escapeHtml(entry.note)}</div>
-            </div>
-          `).join('')
-        : `<div style="color: var(--gray-muted); font-size: 11px; padding: 4px 0;">Sin notas registradas por el equipo todavía.</div>`;
+      const historyHtml = renderHistoryHtml(statusData);
 
       const body = document.getElementById('drawer-body-content');
       body.innerHTML = `
@@ -1350,23 +1380,23 @@ export const prerender = false;
             <span>Estado de Contacto del Equipo</span>
           </div>
           <div class="status-button-grid">
-            <button class="status-btn ${curStatus === 'pending' ? 'selected' : ''}" onclick="window.onDrawerStatusSelect('${lead.id}', 'pending')">
+            <button class="status-btn ${curStatus === 'pending' ? 'selected' : ''}" data-status="pending" onclick="window.onDrawerStatusSelect('${lead.id}', 'pending')">
               <i data-lucide="clock" style="width: 12px; height: 12px;"></i>
               <span>No contactado</span>
             </button>
-            <button class="status-btn ${curStatus === 'contacted' ? 'selected' : ''}" onclick="window.onDrawerStatusSelect('${lead.id}', 'contacted')">
+            <button class="status-btn ${curStatus === 'contacted' ? 'selected' : ''}" data-status="contacted" onclick="window.onDrawerStatusSelect('${lead.id}', 'contacted')">
               <i data-lucide="send" style="width: 12px; height: 12px;"></i>
               <span>Contactado</span>
             </button>
-            <button class="status-btn ${curStatus === 'following' ? 'selected' : ''}" onclick="window.onDrawerStatusSelect('${lead.id}', 'following')">
+            <button class="status-btn ${curStatus === 'following' ? 'selected' : ''}" data-status="following" onclick="window.onDrawerStatusSelect('${lead.id}', 'following')">
               <i data-lucide="refresh-cw" style="width: 12px; height: 12px;"></i>
               <span>En seguimiento</span>
             </button>
-            <button class="status-btn ${curStatus === 'confirmed' ? 'selected' : ''}" onclick="window.onDrawerStatusSelect('${lead.id}', 'confirmed')">
+            <button class="status-btn ${curStatus === 'confirmed' ? 'selected' : ''}" data-status="confirmed" onclick="window.onDrawerStatusSelect('${lead.id}', 'confirmed')">
               <i data-lucide="check-circle-2" style="width: 12px; height: 12px;"></i>
               <span>Confirmado</span>
             </button>
-            <button class="status-btn ${curStatus === 'declined' ? 'selected' : ''}" onclick="window.onDrawerStatusSelect('${lead.id}', 'declined')">
+            <button class="status-btn ${curStatus === 'declined' ? 'selected' : ''}" data-status="declined" onclick="window.onDrawerStatusSelect('${lead.id}', 'declined')">
               <i data-lucide="ban" style="width: 12px; height: 12px;"></i>
               <span>Descartado</span>
             </button>
@@ -1469,11 +1499,19 @@ export const prerender = false;
             </button>
           </div>
 
-          <div class="notes-history-list">
+          <div class="notes-history-list" id="drawer-notes-history">
             ${historyHtml}
           </div>
         </div>
       `;
+
+      // Guarda automáticamente el nombre en localStorage cada vez que el usuario escribe
+      const nameInput = document.getElementById('agent-name-input');
+      if (nameInput) {
+        nameInput.addEventListener('input', (e) => {
+          localStorage.setItem('speakup_vps_agent', e.target.value.trim());
+        });
+      }
 
       lucide.createIcons();
     }
@@ -1485,7 +1523,7 @@ export const prerender = false;
     window.saveNote = function(leadId) {
       const nameInput = document.getElementById('agent-name-input');
       const textInput = document.getElementById('agent-note-text');
-      const name = (nameInput ? nameInput.value.trim() : '') || 'Agente';
+      const name = (nameInput ? nameInput.value.trim() : '') || localStorage.getItem('speakup_vps_agent') || 'Agente';
       const note = textInput ? textInput.value.trim() : '';
 
       if (!note) {
@@ -1494,8 +1532,10 @@ export const prerender = false;
       }
 
       localStorage.setItem('speakup_vps_agent', name);
+      if (nameInput) nameInput.value = name;
+      if (textInput) textInput.value = ''; // Limpia ÚNICAMENTE el textarea
+
       persistStatus(leadId, null, name, note);
-      textInput.value = '';
     };
 
     window.closeDossier = function() {
