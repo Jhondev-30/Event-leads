@@ -150,7 +150,18 @@
       "auditNote": "Ariel Dorsey ya no ejerce como VP de Conferencias en ACG Nacional. Para ACG a nivel nacional, la Directora/VP activa confirmada en el dataset es Kate Weaver.",
       "verificationActionNeeded": "No contactar a Ariel. Contactar a Kate Weaver (VP activa en el dataset).",
       "replacementContact": "Kate Weaver (VP, Association for Corporate Growth)"
-    }
+    },
+    "alternativeContacts": [
+      {
+        "fullName": "Kate Weaver",
+        "title": "Vice President, Events",
+        "company": "Association for Corporate Growth (ACG)",
+        "linkedinUrl": "https://www.linkedin.com/in/kate-weaver-0324378",
+        "email": "kweaver@acg.org",
+        "source": "Apollo",
+        "note": "Ya es lead verificado en la página. Según Apollo, el lead principal ya no está en la organización."
+      }
+    ]
   },
   {
     "id": "lead-kaari-baldwin-acg-boston--ass",
@@ -318,7 +329,7 @@
     "state": "NY",
     "country": "US",
     "linkedinUrl": "https://www.linkedin.com/in/aaronleeder",
-    "email": "aleeder@joinpavilion.com",
+    "email": "aaron@joinpavilion.com",
     "linkedinFollowers": 4500,
     "lead_source_network": "linkedin",
     "recentPostDaysAgo": 11,
@@ -394,7 +405,7 @@
     "state": "IL",
     "country": "US",
     "linkedinUrl": "https://www.linkedin.com/in/samantha-carducci",
-    "email": "scarducci@joinpavilion.com",
+    "email": "samantha.carducci@joinpavilion.com",
     "linkedinFollowers": 2800,
     "lead_source_network": "linkedin",
     "recentPostDaysAgo": 19,
@@ -546,7 +557,7 @@
     "state": "FL",
     "country": "US",
     "linkedinUrl": "https://www.linkedin.com/in/debbie-osborne-b5ba3110",
-    "email": "dosborne@moneyshow.com",
+    "email": "debbieosborne@moneyshow.com",
     "linkedinFollowers": 1150,
     "lead_source_network": "linkedin",
     "recentPostDaysAgo": 22,
@@ -834,7 +845,18 @@
       "confidenceScore": 82,
       "auditNote": "Contacto verificado en la entidad; verificar si la postulación se canaliza directo o mediante CFP.",
       "verificationActionNeeded": "Validar si recibe propuestas de conferencistas vía email directo o portal CFP."
-    }
+    },
+    "alternativeContacts": [
+      {
+        "fullName": "Kate Weaver",
+        "title": "Vice President, Events",
+        "company": "Association for Corporate Growth (ACG)",
+        "linkedinUrl": "https://www.linkedin.com/in/kate-weaver-0324378",
+        "email": "kweaver@acg.org",
+        "source": "Apollo",
+        "note": "Ya es lead verificado; lleva los eventos de ACG a nivel nacional. Según Apollo, el lead principal ya no está en la organización."
+      }
+    ]
   },
   {
     "id": "lead-colin-campbell-pavilion---form",
@@ -1002,7 +1024,7 @@
     "state": "NY",
     "country": "US",
     "linkedinUrl": "https://www.linkedin.com/in/casey-e-coleman-8432336b",
-    "email": "ccoleman@acgnyc.org",
+    "email": "ccoleman@acg.org",
     "linkedinFollowers": 2100,
     "lead_source_network": "linkedin",
     "recentPostDaysAgo": 14,
@@ -1078,7 +1100,7 @@
     "state": "PA",
     "country": "US",
     "linkedinUrl": "https://www.linkedin.com/in/alison-garber-8088505",
-    "email": "agarber@acgphila.org",
+    "email": "agarber@acg.org",
     "linkedinFollowers": 1950,
     "lead_source_network": "linkedin",
     "recentPostDaysAgo": 21,
@@ -1306,7 +1328,7 @@
     "state": "NY",
     "country": "US",
     "linkedinUrl": "https://www.linkedin.com/in/caitlin-fitzpatrick-cmp",
-    "email": "cfitzpatrick@kbra.com",
+    "email": "caitlin.fitzpatrick@kbra.com",
     "linkedinFollowers": 2300,
     "lead_source_network": "linkedin",
     "recentPostDaysAgo": 19,
@@ -1595,7 +1617,18 @@
       "confidenceScore": 82,
       "auditNote": "Contacto verificado en la entidad; verificar si la postulación se canaliza directo o mediante CFP.",
       "verificationActionNeeded": "Validar si recibe propuestas de conferencistas vía email directo o portal CFP."
-    }
+    },
+    "alternativeContacts": [
+      {
+        "fullName": "Pranita Nangia",
+        "title": "Senior Conference Producer",
+        "company": "IMN",
+        "linkedinUrl": "https://www.linkedin.com/in/pranitanangia",
+        "email": "",
+        "source": "Apollo",
+        "note": "Apollo no tiene email. Su portafolio en IMN es multifamily, no ETF: confirmar quién produce el ETF Summit. Según Apollo, el lead principal ya no está en la organización."
+      }
+    ]
   },
   {
     "id": "lead-kimberly-colletta-iqpc---former-o",
@@ -1671,7 +1704,18 @@
       "confidenceScore": 75,
       "auditNote": "Kimberly pasó de Opal Financial Group a IQPC como Divisional Director. Para summits de IQPC contactarla; para Opal Group buscar co-organizador.",
       "verificationActionNeeded": "Revisar LinkedIn antes de escribir para confirmar si la propuesta es para IQPC o Opal."
-    }
+    },
+    "alternativeContacts": [
+      {
+        "fullName": "Daniel Meador",
+        "title": "Head of Production & Business Development",
+        "company": "Opal Group",
+        "linkedinUrl": "https://www.linkedin.com/in/danmeador1",
+        "email": "dmeador@opalgroup.net",
+        "source": "Apollo",
+        "note": "Ya es lead verificado en la página. Según Apollo, el lead principal ya no está en la organización."
+      }
+    ]
   },
   {
     "id": "lead-megan-tallman--cmp-financial-plann",
@@ -2051,7 +2095,18 @@
       "confidenceScore": 82,
       "auditNote": "Contacto verificado en la entidad; verificar si la postulación se canaliza directo o mediante CFP.",
       "verificationActionNeeded": "Validar si recibe propuestas de conferencistas vía email directo o portal CFP."
-    }
+    },
+    "alternativeContacts": [
+      {
+        "fullName": "Kristin Mooney",
+        "title": "Senior Vice President of Events, Inc. and Fast Company",
+        "company": "Mansueto Ventures (Inc. Magazine & Fast Company)",
+        "linkedinUrl": "https://www.linkedin.com/in/kristin-m-mooney",
+        "email": "kmooney@mansueto.com",
+        "source": "Apollo",
+        "note": "Ya es lead verificado en la página. Apollo no encontró al lead principal (devolvió a otra persona con el mismo nombre)."
+      }
+    ]
   },
   {
     "id": "lead-dena-levitz-inc--magazine",
@@ -2127,7 +2182,18 @@
       "confidenceScore": 82,
       "auditNote": "Contacto verificado en la entidad; verificar si la postulación se canaliza directo o mediante CFP.",
       "verificationActionNeeded": "Validar si recibe propuestas de conferencistas vía email directo o portal CFP."
-    }
+    },
+    "alternativeContacts": [
+      {
+        "fullName": "Kristin Mooney",
+        "title": "Senior Vice President of Events, Inc. and Fast Company",
+        "company": "Mansueto Ventures (Inc. Magazine & Fast Company)",
+        "linkedinUrl": "https://www.linkedin.com/in/kristin-m-mooney",
+        "email": "kmooney@mansueto.com",
+        "source": "Apollo",
+        "note": "Ya es lead verificado en la página. Según Apollo, el lead principal ya no está en la organización."
+      }
+    ]
   },
   {
     "id": "lead-marcie-rosenstock-mansueto-ventur",
