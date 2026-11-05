@@ -1,5 +1,4 @@
 import fs from 'node:fs';
-import path from 'node:path';
 
 const leadsPath = 'c:/Users/jhona/Documents/Antigravity proyects/busqueda de eventos/astro-calendar/src/data/generalLeads.json';
 const leads = JSON.parse(fs.readFileSync(leadsPath, 'utf8'));
@@ -10,7 +9,6 @@ function getDetailedAudience(l) {
   const evName = ((l.actualEvents && l.actualEvents[0]?.name) || l.eventName || '').toLowerCase();
   const bm = l.budgetModel || '';
 
-  // 1. If budgetModel already has clean attendee info, refine it
   if (bm.includes('10,000+ Pediatras')) return '10,000+ Médicos Pediatras, Directores Clínicos y Líderes de Salud Infantil';
   if (bm.includes('4,000+ CEOs Educativos')) return '4,000+ Superintendentes de Escuelas, Rectores y CEOs Educativos';
   if (bm.includes('2,000+ CEOs y Directores de Bancos')) return '2,000+ Directores Generales, Presidentes y Ejecutivos de Bancos';
@@ -79,7 +77,6 @@ function getDetailedAudience(l) {
   if (comp.includes('iqpc') || comp.includes('sson')) return '1,200+ Directores de Servicios Compartidos, Finanzas y Transformación Digital';
   if (comp.includes('pavilion')) return '1,500+ Directores de Ingresos (CRO), CEOs y Líderes de Go-To-Market B2B';
 
-  // Fallback to formatted budgetModel or industry
   if (bm.includes('/')) {
     const parts = bm.split('/');
     return parts.slice(1).join(' / ').trim();
@@ -98,8 +95,9 @@ const csvHeader = [
   'Modelo Presupuestario',
   'Organizador / Tomador de Decisión',
   'Cargo / Rol',
-  'Empresa / Entidad Organizadora',
+  'Email del Organizador',
   'LinkedIn Verificado',
+  'Empresa / Entidad Organizadora',
   'URL Oficial del Evento',
   'Conferencistas Sugeridos (Catálogo SpeakUp)',
   'Tópicos ICP Asignados',
@@ -125,6 +123,7 @@ leads.forEach((l, idx) => {
   const feeRange = l.estimatedFeeRange || l.monetization?.estimatedFee || '$10,000 - $25,000 USD';
   const paymentProb = l.paymentProbability || l.monetization?.probability || 'ALTA (75% - 85%)';
   const budgetModel = l.budgetModel || l.monetization?.budgetModel || 'Presupuesto Institucional de Conferencia Plenaria';
+  const email = (l.email && l.email.trim() && l.email !== 'N/A') ? l.email.trim() : 'Contacto vía LinkedIn / Web';
   const speakers = (l.assignedSpeakers || l.matchedSpeakers || []).join(' | ');
   const topics = (l.matchedIcpTopics || l.matchedTopics || []).join(', ');
   const justification = l.monetizationJustification || l.monetization?.rationale || l.verification?.auditNote || 'Conferencia nacional con presupuesto etiquetado de oradores plenarios.';
@@ -141,8 +140,9 @@ leads.forEach((l, idx) => {
     escapeCsv(budgetModel),
     escapeCsv(l.fullName),
     escapeCsv(l.title),
-    escapeCsv(l.company),
+    escapeCsv(email),
     escapeCsv(l.linkedinUrl),
+    escapeCsv(l.company),
     escapeCsv(eventUrl),
     escapeCsv(speakers),
     escapeCsv(topics),
@@ -154,9 +154,9 @@ leads.forEach((l, idx) => {
 // Write to primary dedicated file
 const outPath1 = 'c:/Users/jhona/Documents/Antigravity proyects/busqueda de eventos/output/leads-eventos-fechas-audiencias-fees.csv';
 fs.writeFileSync(outPath1, rows.join('\n'), 'utf8');
-console.log(`Generated dedicated CSV: ${outPath1} (${rows.length - 1} leads)`);
+console.log(`Generated dedicated CSV: ${outPath1} (${rows.length - 1} leads) with Organizer Email and LinkedIn!`);
 
-// Also update master CSV leads-verificados-total-183.csv with these exact clean columns
+// Also update master CSV leads-verificados-total-183.csv
 const outPath2 = 'c:/Users/jhona/Documents/Antigravity proyects/busqueda de eventos/output/leads-verificados-total-183.csv';
 fs.writeFileSync(outPath2, rows.join('\n'), 'utf8');
 console.log(`Updated master CSV: ${outPath2} (${rows.length - 1} leads)`);
